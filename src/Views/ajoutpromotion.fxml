@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="1080.0" style="-fx-background-color: #86CBFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjoutpromotionController">
+   <children>
+      <JFXTextArea fx:id="contenu" layoutX="332.0" layoutY="225.0" />
+      <Label layoutX="465.0" layoutY="150.0" prefHeight="51.0" prefWidth="150.0" text="Veuillez saisir votre contenu" />
+      <JFXButton fx:id="ajouter_promotion" layoutX="513.0" layoutY="518.0" onAction="#ajouter_promotion" style="-fx-background-color: black;" text="Ajouter" />
+      <ImageView fx:id="imagepromotion" fitHeight="150.0" fitWidth="200.0" layoutX="848.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="selectionner_photo" layoutX="922.0" layoutY="336.0" onAction="#uploadImage" text="Selectionner photo" />
+   </children>
+</AnchorPane>

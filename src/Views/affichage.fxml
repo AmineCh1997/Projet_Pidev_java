@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="1080.0" style="-fx-background-color: #86CBFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AffichageController">
+   <children>
+      <ScrollPane prefHeight="748.0" prefWidth="1080.0">
+         <content>
+            <AnchorPane fx:id="anchorpane" prefHeight="748.0" prefWidth="1080.0" style="-fx-background-color: #86CBFF;">
+               <children>
+                  <JFXButton fx:id="retour" layoutX="1001.0" layoutY="701.0" onAction="#retour" style="-fx-background-color: black;" text="Retour" />
+               </children></AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

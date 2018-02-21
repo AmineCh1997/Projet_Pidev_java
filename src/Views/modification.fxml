@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="1080.0" style="-fx-background-color: #86CBFF;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="controller.ModificationController">
+   <children>
+      <Label layoutX="79.0" layoutY="205.0" prefHeight="29.0" prefWidth="196.0" text="L'id de la publication modifier" />
+      <JFXTextField fx:id="idamodifier" layoutX="405.0" layoutY="192.0" />
+      <JFXButton fx:id="modifier" layoutX="435.0" layoutY="516.0" onAction="#modifier_publication" style="-fx-background-color: black;" text="Modifier" />
+      <JFXTextArea fx:id="contenuamodifier" layoutX="264.0" layoutY="297.0" />
+      <Label layoutX="45.0" layoutY="372.0" prefHeight="25.0" prefWidth="175.0" text="Le contenu à modifier" />
+      <JFXButton fx:id="retour" layoutX="1014.0" layoutY="14.0" onAction="#retour" style="-fx-background-color: black;" text="Retour" />
+   </children>
+</AnchorPane>
