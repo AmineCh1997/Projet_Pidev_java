@@ -10,6 +10,7 @@
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/projet_pidev/Projet_Pidev.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Views/EnvoieMotPasse.fxml</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/GestionCategorie.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Views/affichage.fxml</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/InscriController.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Views/gestioncategorie.fxml</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/Enovie_mot_passeController.java</file>
@@ -20,7 +21,10 @@
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/MenuController.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Entities/user.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/crudPublication.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Entities/Mail.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/crudPromotion.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Views/affichagepromotion.fxml</file>
         </group>
     </open-files>
 </project-private>

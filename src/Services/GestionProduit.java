@@ -5,11 +5,10 @@
  */
 package Services;
 
-import Controller.InscriController;
 import Utiles.Basededonne;
 import Entities.Produit;
-import com.mysql.jdbc.PreparedStatement;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
