@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #86CBFF;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AfficherproduitController">
+   <children>
+      <ScrollPane fx:id="SP" layoutX="23.0" layoutY="43.0" prefHeight="432.0" prefWidth="426.0">
+         <content>
+            <AnchorPane fx:id="AP" prefHeight="426.0" prefWidth="415.0" />
+         </content></ScrollPane>
+      <ComboBox fx:id="categoriecombo1" layoutX="161.0" layoutY="14.0" prefWidth="150.0" promptText="Catalogues" />
+      <Pane layoutX="454.0" layoutY="43.0" prefHeight="481.0" prefWidth="407.0">
+         <children>
+            <JFXTextArea fx:id="informationsproduit" layoutX="83.0" layoutY="323.0" prefHeight="151.0" prefWidth="221.0" />
+            <JFXTextArea fx:id="nomproduit" layoutX="62.0" layoutY="6.0" prefHeight="48.0" prefWidth="94.0" />
+            <JFXTextArea fx:id="villeproduit" layoutX="204.0" layoutY="30.0" prefHeight="25.0" prefWidth="70.0" />
+            <ImageView fx:id="imageproduit" fitHeight="203.0" fitWidth="294.0" layoutX="17.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <JFXButton layoutX="592.0" layoutY="550.0" onAction="#ajout" style="-fx-background-color: white;" text="Ajouter Bon Plan" />
+   </children>
+</AnchorPane>
