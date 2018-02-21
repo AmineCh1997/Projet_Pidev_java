@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #86CBFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuController">
+   <children>
+      <ButtonBar layoutX="453.0" layoutY="210.0" prefHeight="40.0" prefWidth="200.0" />
+      <Label layoutX="83.0" layoutY="30.0" prefHeight="81.0" prefWidth="140.0" text="AyaWin" textFill="#f0675e">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <JFXButton focusTraversable="false" layoutX="1044.0" layoutY="71.0" onAction="#go_Back_inscri" text="Deconnexion" />
+      <ImageView layoutX="974.0" layoutY="63.0">
+         <image>
+            <Image url="@../Utiles/icons8_Male_User_48px_1.png" />
+         </image>
+      </ImageView>
+      <JFXButton focusTraversable="false" layoutX="972.0" layoutY="62.0" onAction="#go_Profile" prefHeight="48.0" prefWidth="51.0" text="." />
+      <ImageView layoutX="897.0" layoutY="63.0">
+         <image>
+            <Image url="@../Utiles/icons8_Moleskine_48px_1.png" />
+         </image>
+      </ImageView>
+      <JFXButton focusTraversable="false" layoutX="897.0" layoutY="63.0" prefHeight="48.0" prefWidth="47.0" text="." />
+      <ImageView layoutX="814.0" layoutY="63.0">
+         <image>
+            <Image url="@../Utiles/icons8_Warning_Shield_48px_1.png" />
+         </image>
+      </ImageView>
+      <JFXButton focusTraversable="false" layoutX="814.0" layoutY="62.0" prefHeight="48.0" prefWidth="47.0" text="." />
+   </children>
+</AnchorPane>

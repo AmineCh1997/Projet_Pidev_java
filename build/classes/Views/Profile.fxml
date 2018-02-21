@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfileController">
+   <children>
+      <Label focusTraversable="false" layoutX="69.0" layoutY="483.0" text="Nom : " textFill="#0022ff" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="NomLabel" layoutX="335.0" layoutY="483.0" prefHeight="30.0" prefWidth="292.0" />
+      <Label focusTraversable="false" layoutX="69.0" layoutY="562.0" text="Prenom : " textFill="#0022ff" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="NumLabel" layoutX="336.0" layoutY="710.0" prefHeight="30.0" prefWidth="292.0" />
+      <Label focusTraversable="false" layoutX="69.0" layoutY="710.0" text="Num Tél  : " textFill="#0022ff" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="EmailLabel" layoutX="333.0" layoutY="641.0" prefHeight="30.0" prefWidth="292.0" />
+      <Label focusTraversable="false" layoutX="69.0" layoutY="636.0" text="Email :" textFill="#0022ff" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="PrenomLabel" layoutX="336.0" layoutY="562.0" prefHeight="30.0" prefWidth="292.0" />
+      <ImageView id="ImageUser" fx:id="ImageUser" fitHeight="448.0" fitWidth="533.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton focusTraversable="false" layoutX="54.0" layoutY="14.0" onAction="#upload_action" prefHeight="448.0" prefWidth="533.0" text="." />
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="1120.0" layoutY="29.0">
+         <image>
+            <Image url="@../Utiles/icons8_Go_Back_48px_1.png" />
+         </image>
+      </ImageView>
+      <JFXButton focusTraversable="false" layoutX="1121.0" layoutY="28.0" onAction="#go_Back_Menu" prefHeight="48.0" prefWidth="48.0" text="." />
+   </children>
+</AnchorPane>

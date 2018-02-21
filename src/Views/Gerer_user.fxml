@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F0675E;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Gerer_userController">
+   <children>
+      <TableView fx:id="tabview" layoutX="170.0" layoutY="200.0" prefHeight="426.0" prefWidth="895.0">
+        <columns>
+          <TableColumn fx:id="id_col" prefWidth="96.0" style="color: #86CBFF;" text="Id_user" />
+          <TableColumn fx:id="nom_col" prefWidth="116.0" text="Nom_user" />
+            <TableColumn fx:id="prenom_col" prefWidth="150.0" text="Prenom_user" />
+            <TableColumn fx:id="numero_col" minWidth="0.0" prefWidth="164.0" text="Numero_user" />
+            <TableColumn fx:id="email_col" minWidth="0.0" prefWidth="242.0" text="Email_user" />
+            <TableColumn id="bannir_col" fx:id="bannir_col" minWidth="0.0" prefWidth="129.0" text="Bannir" />
+        </columns>
+      </TableView>
+      <Label layoutX="445.0" layoutY="70.0" text="Utilisateurs de AyaWin" textFill="#004e86">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView layoutX="1124.0" layoutY="30.0">
+         <image>
+            <Image url="@../Utiles/icons8_Go_Back_48px_1.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1127.0" layoutY="33.0" onAction="#go_back_Dashboard" prefHeight="42.0" prefWidth="41.0" text="." />
+   </children>
+</AnchorPane>
