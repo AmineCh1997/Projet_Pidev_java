@@ -18,13 +18,14 @@
       </ImageView>
       <JFXTextField fx:id="Pseudo" layoutX="70.0" layoutY="276.0" prefHeight="31.0" prefWidth="280.0" promptText="                Votre email ou pseudo " />
       <JFXPasswordField fx:id="Mot_passe" layoutX="70.0" layoutY="367.0" prefHeight="31.0" prefWidth="280.0" promptText="                    Mot de passe " />
-      <JFXButton focusTraversable="false" layoutX="121.0" layoutY="470.0" onAction="#connection_user" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #86CBFF;" text="Connecter" />
+      <JFXButton focusTraversable="false" layoutX="127.0" layoutY="470.0" onAction="#connection_user" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #86CBFF;" text="Connecter" />
       <Label layoutX="113.0" layoutY="137.0" text="Sign  into AyaWin " textFill="#86cbff">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <JFXButton focusTraversable="false" layoutX="136.0" layoutY="555.0" onAction="#NewTest" style="-fx-background-color: #86CBFF;" text="Créer un compte " />
-      <Label fx:id="LabelErreur" layoutX="96.0" layoutY="575.0" text="Erreur d'authentification " textFill="RED" visible="false" />
+      <JFXButton focusTraversable="false" layoutX="144.0" layoutY="554.0" onAction="#NewTest" style="-fx-background-color: #86CBFF;" text="Créer un compte " />
+      <Label fx:id="LabelErreur" layoutX="129.0" layoutY="607.0" text="Erreur d'authentification " textFill="RED" visible="false" />
+      <JFXButton layoutX="128.0" layoutY="416.0" onAction="#go_mot_passe" text="Mot de passe oublié ?" textFill="RED" />
    </children>
 </AnchorPane>

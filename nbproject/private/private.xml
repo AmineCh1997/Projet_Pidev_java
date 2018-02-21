@@ -8,9 +8,11 @@
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/CRUD_USER.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/ProfileController.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/projet_pidev/Projet_Pidev.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Views/EnvoieMotPasse.fxml</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/GestionCategorie.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/InscriController.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Views/gestioncategorie.fxml</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/Enovie_mot_passeController.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/AfficherproduitController.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/AjouterproduitController.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/GestionProduit.java</file>
@@ -18,6 +20,7 @@
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/MenuController.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Entities/user.java</file>
             <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Entities/Mail.java</file>
         </group>
     </open-files>
 </project-private>

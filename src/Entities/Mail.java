@@ -24,6 +24,9 @@ public class Mail {
                 "javax.net.ssl.SSLSocketFactory");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.port", "465");
+       
+
+
         //get Session   
         session= Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
@@ -66,5 +69,20 @@ public class Mail {
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
+         }
+            public void Send_Mot_passe (String mp , String email) throws AddressException, MessagingException{
+             
+         
+                 
+        //compose message    
+  
+            MimeMessage message = new MimeMessage(session);
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
+            message.setSubject("Compte AyaWin ");
+            message.setText("Votre mot de passe : "+ mp);
+            //send message  
+            Transport.send(message);
+            System.out.println("message sent successfully");
+        
          }
 }

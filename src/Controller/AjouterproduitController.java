@@ -50,7 +50,7 @@ public class AjouterproduitController implements Initializable {
     @FXML private JFXTextField adresseproduit ;
     @FXML private ImageView imageproduit ;
     String selectedC="" ;
-    String path="file:///C:\\Users\\samih\\OneDrive\\Bureau\\samih.jpg";
+    String path=" file:///C:\\\\Users\\\\samih\\\\OneDrive\\\\Bureau\\\\samih.jpg";
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         GestionCategorie Gc = new GestionCategorie();
@@ -91,7 +91,7 @@ public class AjouterproduitController implements Initializable {
             imageproduit.setImage(new Image(msg,400,250,true,true));           
             path=msg ;
         System.out.println(path);
-           
+          
        }
        
     }

@@ -335,7 +335,7 @@ Pattern pattern = Pattern.compile(EMAIL_VERIFICATION);
         stage.show();
         
     }
-    
+   
  
   
 } 

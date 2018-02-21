@@ -135,7 +135,23 @@ public void insertPhoto(String s, user u  ) throws SQLException{
         return list;
     }
     
-    
+    public String get_Mp_Oublie(String Email ) {
+   
+          try {
+              Statement ste=cnx.createStatement();
+              ResultSet rs=ste.executeQuery("select * from utilisateur where emailuser = '"+Email+"'");
+              
+              String Mp= "";
+              while(rs.next()){
+                  
+                  Mp=rs.getString("password");
+              }
+              return Mp;
+          } catch (SQLException ex) {
+              Logger.getLogger(CRUD_USER.class.getName()).log(Level.SEVERE, null, ex);
+          }
+          return null;
+    }
     
 }
     
