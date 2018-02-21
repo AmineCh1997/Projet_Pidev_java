@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #86CBFF;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AjouterproduitController">
+   <children>
+      <Button layoutX="560.0" layoutY="591.0" mnemonicParsing="false" onAction="#ajouterproduit" text="Ajouter un bon plan" />
+      <JFXTextField fx:id="nomproduit" layoutX="113.0" layoutY="65.0" />
+      <JFXTextField fx:id="descriptionproduit" layoutX="122.0" layoutY="220.0" prefHeight="110.0" prefWidth="217.0" />
+      <Label layoutX="35.0" layoutY="74.0" text="Nom" />
+      <Label layoutX="35.0" layoutY="308.0" text="Description" />
+      <Label layoutX="533.0" layoutY="316.0" text="Categorie" />
+      <JFXComboBox fx:id="categoriecombo" layoutX="614.0" layoutY="312.0" />
+      <Label layoutX="37.0" layoutY="128.0" text="Adresse" />
+      <JFXTextField fx:id="adresseproduit" layoutX="115.0" layoutY="119.0" />
+      <JFXTextField fx:id="villeproduit" layoutX="113.0" layoutY="175.0" />
+      <Label layoutX="39.0" layoutY="184.0" text="Ville" />
+      <ImageView fx:id="imageproduit" fitHeight="317.0" fitWidth="425.0" layoutX="50.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="421.0" layoutY="485.0" mnemonicParsing="false" onAction="#upload_img" text="Photo" />
+      <JFXButton layoutX="1034.0" layoutY="43.0" onAction="#back" text="Back" />
+   </children>
+</AnchorPane>

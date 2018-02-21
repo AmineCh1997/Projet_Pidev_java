@@ -62,4 +62,23 @@ public class AdminDashboardController implements Initializable {
         
     }
     
+    @FXML
+    private void go_To_GestionCategorie(ActionEvent event) throws IOException {
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/gestioncategorie.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+    GestioncategorieController ncont = fxmlLoader.<GestioncategorieController>getController();
+    
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        
+    }
+     
+    
 }

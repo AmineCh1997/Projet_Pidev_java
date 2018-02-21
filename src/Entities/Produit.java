@@ -18,6 +18,25 @@ public class Produit {
     private int id_cat ; 
     private String ville ;
     private String adresse  ;
+    private int id_user ;
+
+    public Produit(String img, String nom, String description, int id_cat, String ville, String adresse, int id_user) {
+        this.img = img;
+        this.nom = nom;
+        this.description = description;
+        this.id_cat = id_cat;
+        this.ville = ville;
+        this.adresse = adresse;
+        this.id_user = id_user;
+    }
+
+    public int getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
+    }
 
     public String getVille() {
         return ville;

@@ -18,11 +18,6 @@ package Entities;
  */
 public class user {
     private int id;
-
-
-    
-
-   
     private String nomuser;
     private String prenomuser ; 
     private String pseudouser ; 
@@ -40,6 +35,18 @@ public class user {
     }
     public int getId() {
         return id;
+    }
+
+    public user(int id, String nomuser, String prenomuser, String pseudouser, String emailuser, String password, String numerouser, String photo_profile, int role) {
+        this.id = id;
+        this.nomuser = nomuser;
+        this.prenomuser = prenomuser;
+        this.pseudouser = pseudouser;
+        this.emailuser = emailuser;
+        this.password = password;
+        this.numerouser = numerouser;
+        this.photo_profile = photo_profile;
+        this.role = role;
     }
 
     public void setId(int id) {
@@ -102,12 +109,14 @@ public class user {
         this.password = password;
     }
 
-    
-
     @Override
     public String toString() {
-        return "user{" + "nomuser=" + nomuser + ", prenomuser=" + prenomuser + ", pseudouser=" + pseudouser + ", emailuser=" + emailuser + ", password=" + password + ", numerouser=" + numerouser + ", role=" + role + '}';
+        return "user{" + "id=" + id + ", nomuser=" + nomuser + ", prenomuser=" + prenomuser + ", pseudouser=" + pseudouser + ", emailuser=" + emailuser + ", password=" + password + ", numerouser=" + numerouser + ", photo_profile=" + photo_profile + ", role=" + role + '}';
     }
+
+    
+
+    
 
   
 

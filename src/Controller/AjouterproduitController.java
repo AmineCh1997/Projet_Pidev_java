@@ -16,7 +16,6 @@ import java.util.logging.Logger;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
@@ -26,11 +25,13 @@ import javafx.stage.Stage;
 import Services.GestionCategorie;
 import Services.GestionProduit;
 import Entities.Produit;
+import Services.CRUD_USER;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+
 
 /**
  * FXML Controller class
@@ -49,12 +50,13 @@ public class AjouterproduitController implements Initializable {
     @FXML private JFXTextField adresseproduit ;
     @FXML private ImageView imageproduit ;
     String selectedC="" ;
-    String path="file:///C:/Users/Amine/Pictures/erreur.png";
-    
+    String path="file:///C:\\Users\\samih\\OneDrive\\Bureau\\samih.jpg";
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         GestionCategorie Gc = new GestionCategorie();
+        CRUD_USER cr = new CRUD_USER();
         
+     
         try {
             categoriecombo.getItems().addAll(Gc.afficher_categorieList());
         } catch (SQLException ex) {
@@ -105,6 +107,7 @@ public class AjouterproduitController implements Initializable {
         GestionCategorie Gc = new GestionCategorie();       
         p.setId_cat(Gc.getidbyname(selectedC ));
         p.setImg(path);
+       p.setId_user(InscriController.current_user.getId());
         GestionProduit Gp = new GestionProduit();
         Gp.ajouter_produit(p);
     }

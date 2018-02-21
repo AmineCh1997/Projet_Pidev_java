@@ -68,4 +68,21 @@ public class MenuController implements Initializable {
         stage.show();
         
     }
+    @FXML
+    private void go_to_catalogue(ActionEvent event) throws IOException {
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/afficherproduit.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+    AfficherproduitController ncont = fxmlLoader.<AfficherproduitController>getController();
+    
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();
+        
+    }
+    
 }

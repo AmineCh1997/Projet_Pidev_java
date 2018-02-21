@@ -111,7 +111,7 @@ public user authentification (String pseudo , String mp ) throws SQLException
               ResultSet rs=ste.executeQuery("select * from utilisateur where pseudouser ='"+pseudo+"' and (password ='"+mp+"')");
               while ( rs.next())
               {
-   current_user=new user(rs.getString("nomuser"),rs.getString("prenomuser"),rs.getString("pseudouser"),rs.getString("emailuser"),rs.getString("password"),rs.getString("numerouser"),rs.getString("photo_Profile"),rs.getInt("role")) ; 
+   current_user=new user(rs.getInt("iduser"),rs.getString("nomuser"),rs.getString("prenomuser"),rs.getString("pseudouser"),rs.getString("emailuser"),rs.getString("password"),rs.getString("numerouser"),rs.getString("photo_Profile"),rs.getInt("role")) ; 
          
               }
               return current_user;

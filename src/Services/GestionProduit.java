@@ -5,7 +5,8 @@
  */
 package Services;
 
-import Utiles.Config;
+import Controller.InscriController;
+import Utiles.Basededonne;
 import Entities.Produit;
 import com.mysql.jdbc.PreparedStatement;
 import java.sql.Connection;
@@ -22,7 +23,7 @@ import javafx.collections.ObservableList;
  * @author Amine
  */
 public class GestionProduit {
-    Connection con =Config.getInstance().getConnection();
+    Connection con =Basededonne.getInstance().getConnection();
     
     private Statement ste ; private ResultSet rs; private PreparedStatement pst ;
     
@@ -36,7 +37,7 @@ public class GestionProduit {
        pst.setInt(3, c.getId_cat());   
        ste.executeUpdate(req);*/
         
-       String req = "insert into produit (nom,description,adresse,photo,ville,id_categorie) values ('"+c.getNom()+"','"+c.getDescription()+"','"+c.getAdresse()+"','"+c.getImg()+"','"+c.getVille()+"','"+c.getId_cat()+"')";
+       String req = "insert into produit (nom,description,adresse,photo,ville,id_categorie,id_user) values ('"+c.getNom()+"','"+c.getDescription()+"','"+c.getAdresse()+"','"+c.getImg()+"','"+c.getVille()+"','"+c.getId_cat()+"','"+c.getId_user()+"')";
        ste=con.createStatement();
        ste.executeUpdate(req);
         

@@ -6,17 +6,12 @@
 package Controller;
 
 
-import Entities.Mail;
-import Entities.user;
 import Services.CRUD_USER;
-import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -51,6 +46,7 @@ public class ProfileController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         String PathImage = InscriController.current_user.getPhoto_profile();
+        System.out.println(InscriController.current_user);
        // System.out.println(PathImage);
   NomLabel.setText(InscriController.current_user.getNomuser());
   PrenomLabel.setText(InscriController.current_user.getPrenomuser());

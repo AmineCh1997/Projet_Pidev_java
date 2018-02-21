@@ -3,16 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev/src/Controller/InscriController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev/src/Controller/Gerer_userController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev/src/projet_pidev/Projet_Pidev.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev/src/Controller/AdminDashboardController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev/src/Controller/MenuController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev/src/Controller/FXMLDocumentController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev/src/Services/CRUD_USER.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev/src/Controller/ProfileController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev/src/Controller/ConfirmationController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev/src/Entities/Mail.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/GestioncategorieController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Entities/Produit.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/CRUD_USER.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/ProfileController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/projet_pidev/Projet_Pidev.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/GestionCategorie.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/InscriController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Views/gestioncategorie.fxml</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/AfficherproduitController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/AjouterproduitController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/GestionProduit.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/AdminDashboardController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/MenuController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Entities/user.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/FXMLDocumentController.java</file>
         </group>
     </open-files>
 </project-private>

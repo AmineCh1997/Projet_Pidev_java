@@ -5,7 +5,7 @@
  */
 package Services;
 
-import Utiles.Config;
+import Utiles.Basededonne;
 import Entities.Categorie;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -21,7 +21,7 @@ import javafx.collections.ObservableList;
  * @author Amine
  */
 public class GestionCategorie {
-    Connection con =Config.getInstance().getConnection();
+    Connection con =Basededonne.getInstance().getConnection();
     
     private Statement ste ; private ResultSet rs;
     

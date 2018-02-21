@@ -5,7 +5,6 @@
  */
 package Controller;
 
-import com.jfoenix.controls.JFXTextArea;
 import com.sun.prism.impl.Disposer.Record;
 import java.net.URL;
 import java.sql.SQLException;
@@ -13,18 +12,13 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -37,6 +31,12 @@ import Entities.Categorie;
 import Services.GestionCategorie;
 import Services.GestionProduit;
 import Entities.Produit;
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -242,7 +242,23 @@ public class GestioncategorieController implements Initializable {
         //tablecategories.getItems().addAll(Gc.afficher_categorie1());
     }
     
+    @FXML
+    private void go_back(ActionEvent event) throws IOException {
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/adminDashboard.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+    AdminDashboardController ncont = fxmlLoader.<AdminDashboardController>getController();
     
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();
+      
+        
+    }
     
     
 }

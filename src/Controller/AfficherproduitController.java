@@ -71,6 +71,8 @@ public class AfficherproduitController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         selectedP = new Produit();
         
+
+        
         GestionProduit Gp = new GestionProduit();
          GestionCategorie Gc = new GestionCategorie();
         
@@ -184,7 +186,8 @@ public class AfficherproduitController implements Initializable {
     {
       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/ajouterproduit.fxml"));
         Parent root = (Parent)fxmlLoader.load();
-        
+               
+
         
     AjouterproduitController ncont = fxmlLoader.<AjouterproduitController>getController();
     
@@ -194,7 +197,21 @@ public class AfficherproduitController implements Initializable {
         stage.setScene(scene);
         stage.show();   
     }
+      @FXML
+    public void back_menu(ActionEvent event) throws IOException
+    {
+      FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Menu.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+    MenuController ncont = fxmlLoader.<MenuController>getController();
     
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();   
+    }
     
     
     

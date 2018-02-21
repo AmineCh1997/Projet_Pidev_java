@@ -27,7 +27,7 @@
             <Image url="@../Utiles/icons8_Moleskine_48px_1.png" />
          </image>
       </ImageView>
-      <JFXButton focusTraversable="false" layoutX="897.0" layoutY="63.0" prefHeight="48.0" prefWidth="47.0" text="." />
+      <JFXButton focusTraversable="false" layoutX="897.0" layoutY="63.0" onAction="#go_to_catalogue" prefHeight="48.0" prefWidth="47.0" text="." />
       <ImageView layoutX="814.0" layoutY="63.0">
          <image>
             <Image url="@../Utiles/icons8_Warning_Shield_48px_1.png" />
