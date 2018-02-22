@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="date" prefHeight="558.0" prefWidth="736.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLAjoutController">
+   <children>
+      <Text fill="#f8f8f8" fontSmoothingType="LCD" layoutX="251.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30;" text="Veuillez entrer votre reclamation" textAlignment="CENTER" wrappingWidth="265.13671875" />
+      <JFXTextArea fx:id="reclamation" focusColor="#f5f5f5" layoutX="152.0" layoutY="215.0" prefHeight="185.0" prefWidth="464.0" style="-fx-background-color: white;" />
+      <JFXTextArea fx:id="sujet" focusColor="WHITE" layoutX="152.0" layoutY="149.0" prefHeight="32.0" prefWidth="464.0" style="-fx-background-color: white;" />
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="56.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sujet">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="19.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclamation">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="envoyer" buttonType="RAISED" contentDisplay="CENTER" layoutX="467.0" layoutY="420.0" onAction="#ajouter_reclamation" prefHeight="51.0" prefWidth="108.0" ripplerFill="BLACK" style="-fx-background-color: grey;" text="Envoyer" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="affichage" buttonType="RAISED" layoutX="582.0" layoutY="420.0" onAction="#affiche" prefHeight="51.0" prefWidth="108.0" style="-fx-background-color: grey;" text="Affichage" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="582.0" layoutY="486.0" onAction="#modifier" prefHeight="51.0" prefWidth="108.0" style="-fx-background-color: grey;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="48.0" layoutY="471.0" onAction="#retour4" prefHeight="44.0" prefWidth="108.0" style="-fx-background-color: grey;" text="Retour">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="alerte" layoutX="311.0" layoutY="189.0" text="veuillez saisir un sujet !" textFill="#f50000" visible="false" />
+      <Label fx:id="spam" layoutX="329.0" layoutY="189.0" text="Sujet déja existant !!!" textFill="#ff0101" visible="false" />
+   </children>
+</AnchorPane>

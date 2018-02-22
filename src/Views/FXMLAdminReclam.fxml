@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="bg" prefHeight="558.0" prefWidth="736.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLAdminReclamController">
+   <children>
+      <JFXButton fx:id="retour" layoutX="615.0" layoutY="480.0" onAction="#retour" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: grey;" text="Retour">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="reclamTable" layoutX="189.0" layoutY="34.0" prefHeight="456.0" prefWidth="322.0">
+        <columns>
+            <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="Sujet" editable="true" prefWidth="75.0" text="Sujet" />
+            <TableColumn fx:id="Date" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="BoutonSupp" prefWidth="99.0" text="Supprimer" />
+        </columns>
+      </TableView>
+      
+                        
+   </children>
+</AnchorPane>

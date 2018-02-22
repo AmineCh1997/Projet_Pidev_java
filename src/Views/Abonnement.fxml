@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="736.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AbonnementController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <JFXButton buttonType="RAISED" layoutX="88.0" layoutY="451.0" onAction="#retour5" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: grey;" text="Retour">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="abonnePane" layoutX="280.0" layoutY="165.0" prefHeight="104.0" prefWidth="129.0" visible="false">
+         <children>
+            <ImageView fx:id="desabonner" fitHeight="63.0" fitWidth="58.0" layoutX="35.0" layoutY="35.0" onMouseClicked="#desabonne" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@coeur.png" />
+               </image>
+            </ImageView>
+            
+       
+            <Text fx:id="message" fill="#fc0303" layoutX="11.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous etes abonnés !" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="desabonnePane" layoutX="280.0" layoutY="165.0" prefHeight="104.0" prefWidth="129.0">
+         <children>
+            <ImageView fx:id="abonner" fitHeight="63.0" fitWidth="58.0" layoutX="36.0" layoutY="35.0" onMouseClicked="#abonne" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@coeur2.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="message2" fill="RED" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous n'etes plus abonné" visible="false" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="affiche" layoutX="437.0" layoutY="359.0" onAction="#affichage" style="-fx-background-color: white;" text="Affichage" />
+  
+  
+    </children>
+</AnchorPane>

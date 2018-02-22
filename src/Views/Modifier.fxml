@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="736.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifierController">
+   <children>
+      <Text layoutX="21.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez l'id de la reclamation à modifier">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="idupdate" layoutX="32.0" layoutY="49.0" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: white;" />
+      <Text layoutX="27.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modification" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXTextArea fx:id="sujetupdate" layoutX="113.0" layoutY="173.0" prefHeight="60.0" prefWidth="374.0" style="-fx-background-color: white;" />
+      <JFXTextArea fx:id="reclamupdate" layoutX="113.0" layoutY="270.0" prefHeight="138.0" prefWidth="374.0" style="-fx-background-color: white;" />
+      <Text layoutX="38.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sujet">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="9.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclamation">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXButton buttonType="RAISED" layoutX="377.0" layoutY="438.0" onAction="#modifier_reclamation" style="-fx-background-color: grey;" text="Enregistrer">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="620.0" layoutY="487.0" onAction="#retour3" style="-fx-background-color: grey;" text="Retour">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
