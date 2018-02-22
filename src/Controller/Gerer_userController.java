@@ -9,6 +9,7 @@ import Entities.ButtonCell;
 import Entities.user;
 import Services.CRUD_USER;
 import com.sun.prism.impl.Disposer.Record;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -55,8 +56,6 @@ public class Gerer_userController implements Initializable {
     private TableColumn<user,String> numero_col;
        @FXML
     private TableColumn  bannir_col;
-       @FXML
-       private final Button ButtonCell = new Button("Bannir");
 
 
 
@@ -108,5 +107,14 @@ public class Gerer_userController implements Initializable {
         stage.show();
         
     }
-    // HEllo 
+   
+    
+
+    @FXML
+    private void user_bann(javafx.scene.input.MouseEvent event) throws SQLException {
+        int id = tabview.getSelectionModel().getSelectedItem().getId();
+        CRUD_USER cr = new CRUD_USER();
+        cr.update_role(id);
+    }
+  
 }

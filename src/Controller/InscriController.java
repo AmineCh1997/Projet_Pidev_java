@@ -36,15 +36,19 @@ public class InscriController implements Initializable {
  @FXML JFXTextField Pseudo ;
  @FXML JFXPasswordField Mot_passe ;
  @FXML Label LabelErreur ;
+ @FXML Label labelBann;
  
  public static user current_user;
  CRUD_USER cr = new CRUD_USER();
+   
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+      
+      
+     
     }   
    
       @FXML private void connection_user(ActionEvent event)throws SQLException, IOException
@@ -55,6 +59,7 @@ public class InscriController implements Initializable {
         {
         if(current_user.getRole()==0)
         {
+           
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Menu.fxml"));
         Parent root = (Parent)fxmlLoader.load();
         
@@ -65,7 +70,7 @@ public class InscriController implements Initializable {
         stage.setScene(scene);
         stage.show();  
         }
-        else {
+        else if (current_user.getRole()==1){
                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/adminDashboard.fxml"));
         Parent root = (Parent)fxmlLoader.load();
         
@@ -75,6 +80,11 @@ public class InscriController implements Initializable {
         
         stage.setScene(scene);
         stage.show();  
+        }
+        else if (current_user.getRole()==2){
+            labelBann.setVisible(true);
+            Pseudo.clear();
+            Mot_passe.clear();
         }
         }
         else 

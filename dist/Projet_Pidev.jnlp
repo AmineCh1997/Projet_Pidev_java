@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Projet_Pidev.jar" size="1639799" download="eager" />
+    <jar href="Projet_Pidev.jar" size="1640572" download="eager" />
     <jar href="lib\activation.jar" size="55147" download="eager" />
     <jar href="lib\jfoenix-8.0.1.jar" size="2405715" download="eager" />
     <jar href="lib\mail.jar" size="462098" download="eager" />

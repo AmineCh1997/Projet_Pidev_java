@@ -19,6 +19,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javax.mail.MessagingException;
 
 /**
  * FXML Controller class
@@ -37,11 +38,11 @@ public class Enovie_mot_passeController implements Initializable {
         // TODO
     }  
       @FXML
-    private void go_Back_inscri(ActionEvent event) throws IOException {
+    private void go_Back_inscri(ActionEvent event) throws IOException, MessagingException {
         mp=cr.get_Mp_Oublie(textEmail.getText());
           Mail email = new Mail();
             
-      email.Send(mp,textEmail.getText());
+      email.Send_Mot_passe(mp,textEmail.getText());
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Inscri.fxml"));
         Parent root = (Parent)fxmlLoader.load();
         

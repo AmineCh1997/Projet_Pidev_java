@@ -29,6 +29,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -64,6 +66,8 @@ public class MenuController implements Initializable {
            labelContenu.setLayoutX(5);
            labelContenu.setLayoutY(5);
            labelContenu.setFont(new Font(26));
+           
+           
            /*DatePicker datepicker=new DatePicker(listePub.get(i).getDatepublication().toLocalDate());
            datepicker.setLayoutX(13);
            datepicker.setLayoutY(128);

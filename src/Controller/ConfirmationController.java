@@ -43,7 +43,7 @@ public class ConfirmationController implements Initializable {
     @FXML
     public void check_code ( ActionEvent event ) throws IOException, SQLException
     {
-      if (conf_code.getText().equals("A3ZK9X"))
+      if (conf_code.getText().equals(FXMLDocumentController.message))
       {
           labelError.setVisible(false);
           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Inscri.fxml"));

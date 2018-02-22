@@ -26,6 +26,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 import Entities.ButtonCell;
+import Entities.ButtonCellCat;
 import Entities.ButtonCellProd;
 import Entities.Categorie;
 import Services.GestionCategorie;
@@ -75,7 +76,7 @@ public class GestioncategorieController implements Initializable {
     @FXML
     private Button ajouter;
     @FXML
-    private final Button ButtonCell = new Button("Delete");
+    private final Button ButtonCellCat = new Button("Delete");
     
     int idchoisi=-1 ; ;
    
@@ -186,7 +187,7 @@ public class GestioncategorieController implements Initializable {
 
             @Override
             public TableCell<Record, Boolean> call(TableColumn<Record, Boolean> p) {
-                return new ButtonCell();
+                return new ButtonCellCat();
                 
             }
         

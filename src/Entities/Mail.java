@@ -42,6 +42,7 @@ public class Mail {
                  
         //compose message    
         try {
+            
             MimeMessage message = new MimeMessage(session);
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
             message.setSubject("Confirmation du compte AyaWin");

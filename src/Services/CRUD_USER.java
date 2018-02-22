@@ -152,6 +152,12 @@ public void insertPhoto(String s, user u  ) throws SQLException{
           }
           return null;
     }
+    public void update_role(int id) throws SQLException{
+          
+        PreparedStatement pt = cnx.prepareStatement("update  utilisateur set role='2' where iduser ="+id);
+        pt.executeUpdate();
+    }
+
     
 }
     

@@ -9,23 +9,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.InscriController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #c5c5c5;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.InscriController">
    <children>
       <ImageView fitHeight="831.0" fitWidth="1312.0" layoutX="-3.0">
          <image>
             <Image url="@../Utiles/Sans%20titre.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="Pseudo" layoutX="70.0" layoutY="276.0" prefHeight="31.0" prefWidth="280.0" promptText="                Votre email ou pseudo " />
-      <JFXPasswordField fx:id="Mot_passe" layoutX="70.0" layoutY="367.0" prefHeight="31.0" prefWidth="280.0" promptText="                    Mot de passe " />
-      <JFXButton focusTraversable="false" layoutX="127.0" layoutY="470.0" onAction="#connection_user" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #86CBFF;" text="Connecter" />
-      <Label layoutX="113.0" layoutY="137.0" text="Sign  into AyaWin " textFill="#86cbff">
+      <AnchorPane layoutX="6.0" layoutY="11.0" prefHeight="831.0" prefWidth="429.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="labelBann" layoutX="137.0" layoutY="645.0" text="Votre Compte est bannis " textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="133.0" layoutY="549.0" onAction="#NewTest" prefHeight="31.0" prefWidth="164.0" style="-fx-background-color: #3D4356; -fx-background-radius: 5em;" text="Créer un compte " textFill="WHITE" />
+         </children></AnchorPane>
+      <JFXTextField fx:id="Pseudo" layoutX="80.0" layoutY="286.0" prefHeight="31.0" prefWidth="280.0" promptText="                Votre email ou pseudo " />
+      <JFXPasswordField fx:id="Mot_passe" layoutX="80.0" layoutY="377.0" prefHeight="31.0" prefWidth="280.0" promptText="                    Mot de passe " />
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="137.0" layoutY="480.0" onAction="#connection_user" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #3D4356; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Connecter" textFill="WHITE" />
+      <Label layoutX="123.0" layoutY="147.0" text="Sign  into AyaWin " textFill="#3d4356">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <JFXButton focusTraversable="false" layoutX="144.0" layoutY="554.0" onAction="#NewTest" style="-fx-background-color: #86CBFF;" text="Créer un compte " />
-      <Label fx:id="LabelErreur" layoutX="129.0" layoutY="607.0" text="Erreur d'authentification " textFill="RED" visible="false" />
-      <JFXButton layoutX="128.0" layoutY="416.0" onAction="#go_mot_passe" text="Mot de passe oublié ?" textFill="RED" />
+      <Label fx:id="LabelErreur" layoutX="139.0" layoutY="617.0" text="Erreur d'authentification " textFill="RED" visible="false" />
+      <JFXButton layoutX="138.0" layoutY="426.0" onAction="#go_mot_passe" text="Mot de passe oublié ?" textFill="RED" />
    </children>
 </AnchorPane>

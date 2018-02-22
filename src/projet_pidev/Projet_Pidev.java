@@ -25,6 +25,7 @@ public class Projet_Pidev extends Application {
     this.stg = stage;
         Parent root = FXMLLoader.load(getClass().getResource("/Views/Inscri.fxml"));
         stage.setScene(new Scene(root,1200, 800));
+        
         stage.show();
     }
     

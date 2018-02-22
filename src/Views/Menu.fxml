@@ -8,35 +8,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #86CBFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuController">
    <children>
-      <Label layoutX="66.0" prefHeight="81.0" prefWidth="140.0" text="AyaWin" textFill="#f0675e">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <JFXButton focusTraversable="false" layoutX="1027.0" layoutY="41.0" onAction="#go_Back_inscri" text="Deconnexion" />
-      <ImageView layoutX="957.0" layoutY="33.0">
-         <image>
-            <Image url="@../Utiles/icons8_Male_User_48px_1.png" />
-         </image>
-      </ImageView>
-      <JFXButton focusTraversable="false" layoutX="955.0" layoutY="32.0" onAction="#go_Profile" prefHeight="48.0" prefWidth="51.0" text="." />
-      <ImageView layoutX="880.0" layoutY="33.0">
-         <image>
-            <Image url="@../Utiles/icons8_Moleskine_48px_1.png" />
-         </image>
-      </ImageView>
-      <JFXButton focusTraversable="false" layoutX="880.0" layoutY="33.0" onAction="#go_to_catalogue" prefHeight="48.0" prefWidth="47.0" text="." />
-      <ImageView layoutX="797.0" layoutY="33.0">
-         <image>
-            <Image url="@../Utiles/icons8_Warning_Shield_48px_1.png" />
-         </image>
-      </ImageView>
-      <JFXButton focusTraversable="false" layoutX="797.0" layoutY="32.0" prefHeight="48.0" prefWidth="47.0" text="." />
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="194.0" layoutY="81.0" prefHeight="720.0" prefWidth="720.0">
+      <AnchorPane prefHeight="72.0" prefWidth="1200.0" style="-fx-background-color: #3D4356;">
+         <children>
+            <Label layoutX="48.0" prefHeight="81.0" prefWidth="140.0" text="AyaWin" textFill="#c5c5c5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton focusTraversable="false" layoutX="1054.0" layoutY="25.0" onAction="#go_Back_inscri" style="-fx-background-color: white;" text="Deconnexion" />
+            <ImageView layoutX="980.0" layoutY="17.0">
+               <image>
+                  <Image url="@../Utiles/icons8_Male_User_48px_1.png" />
+               </image>
+            </ImageView>
+            <JFXButton focusTraversable="false" layoutX="978.0" layoutY="17.0" onAction="#go_Profile" prefHeight="48.0" prefWidth="51.0" text="." />
+            <ImageView layoutX="900.0" layoutY="17.0">
+               <image>
+                  <Image url="@../Utiles/icons8_Moleskine_48px_1.png" />
+               </image>
+            </ImageView>
+            <JFXButton focusTraversable="false" layoutX="900.0" layoutY="17.0" onAction="#go_to_catalogue" prefHeight="48.0" prefWidth="47.0" text="." />
+            <ImageView layoutX="815.0" layoutY="17.0">
+               <image>
+                  <Image url="@../Utiles/icons8_Warning_Shield_48px_1.png" />
+               </image>
+            </ImageView>
+            <JFXButton focusTraversable="false" layoutX="816.0" layoutY="17.0" prefHeight="48.0" prefWidth="47.0" text="." />
+         </children>
+      </AnchorPane>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="240.0" layoutY="81.0" prefHeight="720.0" prefWidth="720.0" AnchorPane.topAnchor="81.0">
          <content>
-            <AnchorPane fx:id="anchorpane" prefHeight="720.0" prefWidth="720.0" style="-fx-background-color: #86CBFF;" />
+            <AnchorPane fx:id="anchorpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" />
          </content>
       </ScrollPane>
    </children>

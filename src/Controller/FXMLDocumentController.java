@@ -75,7 +75,7 @@ public class FXMLDocumentController implements Initializable {
     private JFXButton btnContinue;
     @FXML
     private JFXButton btnTest;
-   
+   public static String message ; 
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -182,8 +182,11 @@ public class FXMLDocumentController implements Initializable {
 //             crud.insertST(U);
              InscriController.current_user= U ;
               Mail email = new Mail();
-            
-      email.Send("A3ZK9X",TextEmail.getText());
+                String s = Long.toHexString(Double.doubleToLongBits(Math.random()));
+       s=s.substring(10);
+       s=s.toString().toUpperCase();
+       message=s ;
+      email.Send(message,TextEmail.getText());
                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Confirmation.fxml"));
         Parent root = (Parent)fxmlLoader.load();
         
