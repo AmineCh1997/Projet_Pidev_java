@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import Utiles.Basededonne;
+import Utiles.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -21,7 +21,7 @@ import java.sql.Statement;
  * @author ESPRIT
  */
 public class CrudAvis {
-    Connection con=Basededonne.getInstance().getConnection();
+    Connection con=DataSource.getInstance().getConnection();
         Statement ste;
         ResultSet rs;
     public void afficherlesavis() throws SQLException 
@@ -48,7 +48,7 @@ public class CrudAvis {
         PreparedStatement pt = con.prepareStatement("insert into avis (id_produit,note) values (?,?)");
               
 
-        pt.setString(1,a.getId_produit());
+        pt.setInt(1,a.getId_produit());
          pt.setInt(2,a.getnote());
        try{
          pt.executeUpdate();}
@@ -67,7 +67,7 @@ public class CrudAvis {
        rs=ste.executeQuery(req);
         List<String> list = new ArrayList<>();
         while (rs.next()){
-            String a = "'"+rs.getInt(1)+"'"+rs.getString(2)+"'"+rs.getInt(3)+"'";
+            String a = "'"+rs.getInt(1)+"'"+rs.getInt(2)+"'"+rs.getInt(3)+"'";
             list.add(a);
              
             nmbre++;
@@ -82,7 +82,8 @@ public class CrudAvis {
         {
         
             
-            String req=" DELETE FROM avis WHERE id="+c.getId()  ;
+            String req=" DELETE FROM `avis` WHERE id='"+c.getId()+"' ";
+            ste=con.createStatement();
             ste.executeUpdate(req);
         }
 }

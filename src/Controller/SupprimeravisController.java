@@ -35,7 +35,7 @@ public class SupprimeravisController implements Initializable {
     @FXML TextField id;
     @FXML Button supp;
     @FXML Button retour1;
-    CrudAvis ca=new CrudAvis();
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -50,8 +50,9 @@ public class SupprimeravisController implements Initializable {
         String b=id.getText();
         int a=Integer.parseInt(b);
         c.setId(a);
-        
-        ca.supprimeravis(c);
+        CrudAvis ca=new CrudAvis();
+       
+       ca.supprimeravis(c);
                     
                 }
      @FXML

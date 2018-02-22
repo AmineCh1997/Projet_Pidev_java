@@ -103,7 +103,7 @@ public class Avis1Controller implements Initializable {
         String st=radioSelect(event);
     int num=Integer.parseInt(st);
 
-        avis p = new avis(id_produit.getText(), num);
+        avis p = new avis(Integer.parseInt(id_produit.getText()), num);
         try{
         ca.insertST(p);
         }catch(SQLException ex)

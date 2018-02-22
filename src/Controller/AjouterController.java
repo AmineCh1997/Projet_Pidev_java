@@ -51,7 +51,7 @@ public class AjouterController implements Initializable {
    public void ajouter_commentaire(ActionEvent event) throws SQLException
     {
         
-        commentaire p = new commentaire(cin_personne.getText(),id_prduit.getText(),commentaire.getText());
+        commentaire p = new commentaire(Integer.parseInt(cin_personne.getText()),Integer.parseInt(id_prduit.getText()),commentaire.getText());
         try{
         cr.insertST(p);
         }catch(SQLException ex)

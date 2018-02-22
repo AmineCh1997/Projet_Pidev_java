@@ -49,10 +49,12 @@ public class FXMLsupprimerController implements Initializable {
         
         String b=id.getText();
         int a=Integer.parseInt(b);
+        
         c.setId_commentaire(a);
         
         cr.supprimercommentaire(c);
-                    
+                   
+        
                 }
      @FXML
    private void retour (ActionEvent event) throws IOException {

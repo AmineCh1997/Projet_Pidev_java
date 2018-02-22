@@ -55,7 +55,7 @@ public class MoyenneController implements Initializable {
 }
      public void afficher(ActionEvent event) throws SQLException
     {
-         String q=idp.getText();
+         int q=Integer.parseInt(idp.getText());
         avis c=new avis(q);
         CrudAvis cr = new CrudAvis();
         

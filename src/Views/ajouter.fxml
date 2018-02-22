@@ -16,7 +16,7 @@
       <Text layoutX="122.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="vos commentaire" />
       <Button fx:id="ajouter" layoutX="313.0" layoutY="345.0" mnemonicParsing="false" onAction="#ajouter_commentaire" text="ajouter" />
       <Button fx:id="afficher" layoutX="418.0" layoutY="345.0" mnemonicParsing="false" onAction="#NewTest" text="afficher" />
-      <Button fx:id="modifier" layoutX="226.0" layoutY="345.0" mnemonicParsing="false" onAction="#modifier" text="acceder a la modification" />
+      <Button fx:id="modifier" layoutX="226.0" layoutY="320.0" mnemonicParsing="false" onAction="#modifier" text="acceder a la modification" />
       <Button fx:id="supprimer" layoutX="14.0" layoutY="345.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer un commentaire" />
    </children>
 </AnchorPane>

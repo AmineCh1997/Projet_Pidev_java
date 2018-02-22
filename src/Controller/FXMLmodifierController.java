@@ -57,8 +57,8 @@ public class FXMLmodifierController implements Initializable {
         String b=id_commentaire.getText();
          int a=Integer.parseInt(b);
           p.setId_commentaire(a);
-        p.setCin_personne(cin.getText());
-        p.setId_produit(produit.getText());
+        p.setCin_personne(Integer.parseInt(cin.getText()));
+        p.setId_produit(Integer.parseInt(produit.getText()));
         p.setTexte(commentaire.getText());
        
         cr.modifiercommentaire(p);
