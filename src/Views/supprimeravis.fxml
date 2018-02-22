@@ -5,12 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="Controller.SupprimeravisController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SupprimeravisController">
    <children>
       <JFXTextField fx:id="id" layoutX="194.0" layoutY="141.0" />
-      <Button fx:id="supp" layoutX="248.0" layoutY="250.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
+      <Button fx:id="supp" layoutX="138.0" layoutY="263.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer votre avis" />
       <Text fx:id="retour" layoutX="98.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="rediger l id" />
-      <Button fx:id="retour1" layoutX="381.0" layoutY="250.0" mnemonicParsing="false" onAction="#retour" text="ajouter" />
+      <Button fx:id="retour1" layoutX="347.0" layoutY="263.0" mnemonicParsing="false" onAction="#retour" text="retour" />
    </children>
 </AnchorPane>

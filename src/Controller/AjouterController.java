@@ -62,10 +62,10 @@ public class AjouterController implements Initializable {
     } 
    @FXML
     private void NewTest(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/FXMLafficher1.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/affichageTable.fxml"));
         Parent root = (Parent)fxmlLoader.load();
         
-    FXMLafficher1Controller ncont = fxmlLoader.<FXMLafficher1Controller>getController();
+    AffichageTableController ncont = fxmlLoader.<AffichageTableController>getController();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
         
