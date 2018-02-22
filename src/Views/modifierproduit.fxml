@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="278.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifierproduitController">
+   <children>
+      <Label layoutX="39.0" prefHeight="80.0" prefWidth="200.0" text="Modifier Votre Bon Plan" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="131.0" text="Nom" />
+      <Label layoutX="28.0" layoutY="166.0" text="Ville" />
+      <Label layoutX="14.0" layoutY="263.0" text="Description" />
+      <ImageView fx:id="photoproduit" fitHeight="150.0" fitWidth="200.0" layoutX="52.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton layoutX="108.0" layoutY="550.0" onAction="#changer_info" style="-fx-background-color: orange;" text="Modifier">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="nomproduit" layoutX="76.0" layoutY="127.0" prefHeight="25.0" prefWidth="174.0" />
+      <JFXTextArea fx:id="descproduit" layoutX="78.0" layoutY="261.0" prefHeight="100.0" prefWidth="183.0" />
+      <ComboBox fx:id="comboproduits" layoutX="76.0" layoutY="80.0" prefHeight="25.0" prefWidth="103.0" promptText="Bon Plan" />
+      <Label layoutX="25.0" layoutY="211.0" text="Adresse" />
+      <JFXTextField fx:id="adresseproduit" layoutX="76.0" layoutY="207.0" prefHeight="25.0" prefWidth="174.0" />
+      <JFXButton layoutX="4.0" layoutY="442.0" onAction="#upload_img" text="Photo" />
+      <JFXComboBox fx:id="comboville" layoutX="80.0" layoutY="171.0" />
+   </children>
+</AnchorPane>

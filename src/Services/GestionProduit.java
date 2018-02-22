@@ -91,6 +91,41 @@ public class GestionProduit {
         return listeprod ;
         
     }
+     public List<Produit> getproduitbyuser(int id_user) throws SQLException
+    {
+         String req="select * from produit where id_user='"+id_user+"' ";
+        ste=con.createStatement();
+        rs=ste.executeQuery(req);
+        //ObservableList<String> listecat = new FXCollections.observableArrayList
+        List<Produit> listeprod = new ArrayList<>();
+       
+        while(rs.next())
+            
+        {
+           Produit p = new Produit();
+           
+           p.setId_cat(rs.getInt("id_categorie"));
+           p.setDescription(rs.getString("description"));
+           p.setId(rs.getInt("id"));
+           p.setNom(rs.getString("nom"));
+           p.setImg(rs.getString("photo"));
+           p.setVille(rs.getString("ville"));
+           p.setAdresse(rs.getString("adresse"));
+           listeprod.add(p);
+          
+        }
+        return listeprod ;
+        
+        
+    }
+    public void modifier_produit(Produit p) throws SQLException
+    {
+       String req = "update produit SET nom='"+p.getNom()+"',description='"+p.getDescription()+"',adresse='"+p.getAdresse()+"',photo='"+p.getImg()+"',ville='"+p.getVille()+"' where id='"+p.getId()+"' ";
+       ste=con.createStatement();
+       ste.executeUpdate(req);
+        
+    }
+    
     
     
     
