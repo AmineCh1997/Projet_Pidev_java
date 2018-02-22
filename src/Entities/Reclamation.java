@@ -3,17 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Entities;
 
-package entities;
-
-import java.sql.Connection;
 import java.sql.Date;
 //import java.sql.Date;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Objects;
-import javafx.collections.ObservableList;
-import utile.Basededonne;
 
 /**
  *

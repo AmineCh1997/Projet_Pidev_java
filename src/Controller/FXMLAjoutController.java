@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package controller;
+package Controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
-import entities.Reclamation;
+import Entities.Reclamation;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -29,7 +29,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import service.CRUD_Reclamation;
+import Services.CRUD_Reclamation;
 
 /**
  *
@@ -76,7 +76,7 @@ public void ajouter_reclamation(ActionEvent event ) throws SQLException,IOExcept
  }
 public void affiche (ActionEvent event ) throws SQLException,IOException
 {
-    FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Projet_Pidev/FXMLAdminReclam.fxml"));
+    FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/FXMLAdminReclam.fxml"));
             Parent root = ( Parent ) fxmlloader.load();
      
             FXMLAdminReclamController Adminct= fxmlloader.<FXMLAdminReclamController>getController();
@@ -89,7 +89,7 @@ public void affiche (ActionEvent event ) throws SQLException,IOException
 
 public void modifier (ActionEvent event ) throws SQLException,IOException
 {
-    FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Projet_Pidev/Modifier.fxml"));
+    FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/Modifier.fxml"));
             Parent root = ( Parent ) fxmlloader.load();
      
             ModifierController Adminct1= fxmlloader.<ModifierController>getController();

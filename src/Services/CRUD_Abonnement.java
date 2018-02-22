@@ -4,11 +4,10 @@
  * and open the template in the editor.
  */
 
-package service;
+package Services;
 
-import com.mysql.jdbc.PreparedStatement;
-import entities.Abonnement;
-import entities.Reclamation;
+
+import Entities.Abonnement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,7 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import utile.Basededonne;
+import Utiles.Basededonne;
+import java.sql.PreparedStatement;
 
 /**
  *

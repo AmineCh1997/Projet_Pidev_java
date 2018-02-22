@@ -4,20 +4,20 @@
  * and open the template in the editor.
  */
 
-package service;
+package Services;
 
-import com.mysql.jdbc.PreparedStatement;
-import entities.Reclamation;
+
+import Entities.Reclamation;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import utile.Basededonne;
+import Utiles.Basededonne;
+import java.sql.PreparedStatement;
 
 /**
  *

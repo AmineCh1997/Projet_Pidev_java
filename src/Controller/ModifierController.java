@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 
-package controller;
+package Controller;
 
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
-import entities.Reclamation;
+import Entities.Reclamation;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -21,7 +21,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import service.CRUD_Reclamation;
+import Services.CRUD_Reclamation;
 
 /**
  * FXML Controller class
@@ -39,10 +39,10 @@ public class ModifierController implements Initializable {
     } 
     public void retour3(ActionEvent event ) throws SQLException, IOException 
   {
-      FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Projet_Pidev/FXMLAjout.fxml"));
+      FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/adminDashboard.fxml"));
             Parent root = ( Parent ) fxmlloader.load();
      
-            FXMLAjoutController Adminct3= fxmlloader.<FXMLAjoutController>getController();
+            AdminDashboardController Adminct3= fxmlloader.<AdminDashboardController>getController();
             Scene scene = new Scene(root,1200,800);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);

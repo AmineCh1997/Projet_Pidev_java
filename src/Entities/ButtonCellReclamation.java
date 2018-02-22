@@ -1,4 +1,4 @@
-package entities;
+package Entities;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,7 +15,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
-import service.CRUD_Reclamation;
+import Services.CRUD_Reclamation;
 
 /**
  *

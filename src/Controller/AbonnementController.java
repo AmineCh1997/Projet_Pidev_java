@@ -4,11 +4,9 @@
  * and open the template in the editor.
  */
 
-package controller;
+package Controller;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextArea;
-import entities.Abonnement;
+import Entities.Abonnement;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -20,12 +18,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.image.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import service.CRUD_Abonnement;
+import Services.CRUD_Abonnement;
 
 
 /**
@@ -79,7 +76,7 @@ public class AbonnementController implements Initializable {
     }
      public void affichage (ActionEvent event) throws SQLException,IOException
     {
-        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Projet_Pidev/affichageAbonnement.fxml"));
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/affichageAbonnement.fxml"));
             Parent root = ( Parent ) fxmlloader.load();
      
             AffichageAbonnementController Adminct7= fxmlloader.<AffichageAbonnementController>getController();
@@ -91,7 +88,7 @@ public class AbonnementController implements Initializable {
      
     public void retour5 (ActionEvent event) throws SQLException,IOException
     {
-        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Projet_Pidev/Acceuil.fxml"));
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/Acceuil.fxml"));
             Parent root = ( Parent ) fxmlloader.load();
      
             AcceuilController Adminct4= fxmlloader.<AcceuilController>getController();

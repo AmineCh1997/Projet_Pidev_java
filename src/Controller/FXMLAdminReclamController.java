@@ -4,15 +4,13 @@
  * and open the template in the editor.
  */
 
-package controller;
+package Controller;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXTextArea;
-import com.jfoenix.controls.JFXTreeTableView;
 import com.sun.prism.impl.Disposer.Record;
-import entities.Reclamation;
-import entities.ButtonCell;
+import Entities.Reclamation;
+import Entities.ButtonCell;
+import Entities.ButtonCellReclamation;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
@@ -23,7 +21,6 @@ import java.util.logging.Logger;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -34,11 +31,10 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import service.CRUD_Reclamation;
+import Services.CRUD_Reclamation;
 
 /**
  * FXML Controller class
@@ -106,7 +102,7 @@ public class FXMLAdminReclamController implements Initializable {
 
             @Override
             public TableCell<Record, Boolean> call(TableColumn<Record, Boolean> p) {
-                return new ButtonCell();
+                return new ButtonCellReclamation();
                 
             }
         
@@ -131,7 +127,7 @@ public class FXMLAdminReclamController implements Initializable {
     
     public void retour(ActionEvent event ) throws SQLException, IOException 
   {
-      FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Projet_Pidev/FXMLAjout.fxml"));
+      FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/FXMLAjout.fxml"));
             Parent root = ( Parent ) fxmlloader.load();
      
             FXMLAjoutController Adminct2= fxmlloader.<FXMLAjoutController>getController();

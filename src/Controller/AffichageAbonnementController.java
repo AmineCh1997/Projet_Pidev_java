@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package controller;
+package Controller;
 
-import entities.Abonnement;
+import Entities.Abonnement;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import service.CRUD_Abonnement;
+import Services.CRUD_Abonnement;
 
 /**
  * FXML Controller class

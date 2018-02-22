@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package controller;
+package Controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -36,7 +36,7 @@ public class AcceuilController implements Initializable {
 
     public void reclamation (ActionEvent event ) throws SQLException,IOException
     {
-       FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Projet_Pidev/FXMLAjout.fxml"));
+       FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/FXMLAjout.fxml"));
             Parent root = ( Parent ) fxmlloader.load();
      
             FXMLAjoutController Adminct4= fxmlloader.<FXMLAjoutController>getController();
@@ -48,7 +48,7 @@ public class AcceuilController implements Initializable {
     
     public void abonnement (ActionEvent event ) throws SQLException,IOException
     {
-       FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Projet_Pidev/Abonnement.fxml"));
+       FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/Abonnement.fxml"));
             Parent root = ( Parent ) fxmlloader.load();
      
             AbonnementController Adminct6= fxmlloader.<AbonnementController>getController();
