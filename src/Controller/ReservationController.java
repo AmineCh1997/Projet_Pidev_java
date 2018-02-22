@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controllers;
+package Controller;
 
 import com.jfoenix.controls.JFXButton;
-import entities.Evenement;
+import Entities.Evenement;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -17,7 +17,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import services.Crud_Event;
+import Services.Crud_Event;
+
 
 /**
  *
@@ -54,8 +55,7 @@ public class ReservationController {
         loadDetails();
     }
 	 private void setColumnProperties() {
-        System.out.println("bnj");
-
+        
         /* Override date format in table
          * colDOB.setCellFactory(TextFieldTableCell.forTableColumn(new StringConverter<LocalDate>() {
          String pattern = "dd/MM/yyyy";
@@ -87,8 +87,9 @@ public class ReservationController {
     
 
     private void loadDetails() {
+        Crud_Event ce = new Crud_Event();
         EventList.clear();
-        EventList.addAll(Crud_Event.findAll());
+        EventList.addAll(ce.findAll());
 
         EventTab.setItems(EventList);
     }

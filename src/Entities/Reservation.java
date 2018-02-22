@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entities;
+package Entities;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -43,5 +46,7 @@ public class Reservation {
 	public void setId_produit(int id_produit) {
 		this.id_produit = id_produit;
 	}
+
+  
 
 }

@@ -6,41 +6,17 @@
 
 package Entities;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import static java.util.Collections.list;
-import java.util.List;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import Utiles.DataSource;
-
 /**
  *
  * 
  */
 public class commentaire {
-    Connection con =DataSource.getInstance().getConnection();
-    private Statement ste ; private ResultSet rs;
-    private PreparedStatement ps ;
-
+   
    
     private int id_commentaire;
     private String cin_personne;
     private String id_produit;
     private String texte;
-
-    
-
-    
-    
-    
-
-   
-
 
     public int getId_commentaire() {
         return id_commentaire;
@@ -79,13 +55,7 @@ public class commentaire {
         this.texte = texte;
     }
      public commentaire() {
-        try{
-            ste=con.createStatement();
-        }
-        catch(SQLException ex)
-        {
-            System.out.println(ex);
-        }
+       
     }
 
     public commentaire(int id_commentaire, String texte) {
@@ -99,13 +69,7 @@ public class commentaire {
         this.cin_personne = cin_personne;
         this.id_produit = id_produit;
         this.texte = texte;
-         try{
-            ste=con.createStatement();
-        }
-        catch(SQLException ex)
-        {
-            System.out.println(ex);
-        }
+        
          
     }
 
@@ -116,11 +80,6 @@ public class commentaire {
         this.texte = texte;
     }
     
-    
-   
-    
-       
- 
-  
+
 }
 

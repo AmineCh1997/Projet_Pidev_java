@@ -3,23 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controllers;
+package Controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import entities.Evenement;
-import java.awt.event.ActionEvent;
+import Entities.Evenement;
 import java.net.URL;
 import java.sql.Date;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
-import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
-import services.Crud_Event;
-import sun.applet.Main;
+import Services.Crud_Event;
 
 /**
  * FXML Controller class
@@ -56,7 +53,8 @@ public class AddformController implements Initializable {
 
     @FXML
     private void add(MouseEvent event) {
-        Crud_Event.insererEvent(new Evenement(Description.getText(),Adresse.getText(),Date.valueOf(Datedebut.getValue()),Date.valueOf(Datefin.getValue())
+        Crud_Event ce = new Crud_Event();
+        ce.insererEvent(new Evenement(Description.getText(),Adresse.getText(),Date.valueOf(Datedebut.getValue()),Date.valueOf(Datefin.getValue())
 				,Image.getText(),Integer.parseInt(nbr.getText()),Integer.parseInt(total.getText()),IDP.getVisibleRowCount()));
     }
 

@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package services;
+package Services;
 
-import entities.Reservation;
-import entities.Evenement;
+import Entities.Evenement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,18 +15,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.collections.ObservableList;
-import static jdk.nashorn.internal.runtime.Debug.id;
-import utils.DataSource;
-
+import Utiles.Basededonne;
 /**
  *
  * @author win7
  */
 public class Crud_Event {
-
-	public static void insererEvent(Evenement E) {
-		Connection con = DataSource.getInstance().getCon();
+Connection con = Basededonne.getInstance().getConnection();
+	public  void insererEvent(Evenement E) {
+		
 		String query = "INSERT INTO `evenement`( `description`, `adresse`, `date_debut`, `date_fin` , `photo` , `nbr_participant`,`totalparticipants`)"
 				+ " VALUES (?,?,?,?,?,?,?)";
 		try {
@@ -47,8 +43,8 @@ public class Crud_Event {
 		}
 	}
 
-	public static void UpEvent(Evenement E, int id) {
-		Connection con = DataSource.getInstance().getCon();
+	public  void UpEvent(Evenement E, int id) {
+		
 		//int usr = E.getId();
 		String query = "UPDATE `evenement` SET  description=? , adresse=? , date_debut=? , date_fin=? , photo=? , nbr_participant=? ,totalparticipants=? WHERE id='" + id + "'  ";
 		try {
@@ -68,8 +64,8 @@ public class Crud_Event {
 		}
 	}
 
-	public static List<Evenement> findAll() {
-		Connection con = DataSource.getInstance().getCon();
+	public  List<Evenement> findAll() {
+		
 		List result = new ArrayList<Evenement>();
 		String query = "select * from evenement";
 		try {
@@ -88,8 +84,8 @@ public class Crud_Event {
 		return null;
 	}
 
-	public static Evenement getEvenementById(int id) {
-		Connection con = DataSource.getInstance().getCon();
+	public  Evenement getEvenementById(int id) {
+		
 		Evenement E = null;
 		String query = "select * from evenement where id = " + id;
 		try {
@@ -107,8 +103,8 @@ public class Crud_Event {
 		return null;
 	}
 
-	public static void Delete(int id) {
-		Connection con = DataSource.getInstance().getCon();
+	public  void Delete(int id) {
+		
 		//int usr = E.getId();
 		String query = "DELETE FROM `evenement` WHERE id = "+id;
 		try {

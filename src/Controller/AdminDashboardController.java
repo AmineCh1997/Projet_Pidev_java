@@ -6,6 +6,7 @@
 package Controller;
 
 import static Controller.InscriController.current_user;
+import Entities.Evenement;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -97,6 +98,25 @@ public class AdminDashboardController implements Initializable {
         
         
     }
-     
+     @FXML
+    private void go_To_Evenements(ActionEvent event) throws  IOException {
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Event.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+         EventController ncont = fxmlLoader.<EventController>getController();
     
-}
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        
+    }
+     
+    }
+   
+    
+

@@ -3,28 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controllers;
+package Controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import com.sun.org.apache.xerces.internal.impl.dv.xs.DateDV;
-import entities.Evenement;
+import Entities.Evenement;
 import java.net.URL;
-import java.sql.Connection;
 import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import services.Crud_Event;
-import utils.DataSource;
+import Services.Crud_Event;
 
 /**
  * FXML Controller class
@@ -63,8 +55,9 @@ public class UpformController implements Initializable {
 
     @FXML
     private void Update(MouseEvent event) {
+        Crud_Event ce = new Crud_Event();
        // EventController.ID.getCellValueFactory();
-        Crud_Event.UpEvent(new Evenement(Description.getText(),Adresse.getText(),Date.valueOf(Datedebut.getValue()),Date.valueOf(Datefin.getValue()),Image.getText(),Integer.parseInt(nbr.getText()),Integer.parseInt(total.getText()),5),idToEdit);
+        ce.UpEvent(new Evenement(Description.getText(),Adresse.getText(),Date.valueOf(Datedebut.getValue()),Date.valueOf(Datefin.getValue()),Image.getText(),Integer.parseInt(nbr.getText()),Integer.parseInt(total.getText()),5),idToEdit);
  
     }
     

@@ -27,10 +27,13 @@ import Services.GestionProduit;
 import Entities.Produit;
 import Services.CRUD_USER;
 import java.io.IOException;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 
 
 /**
@@ -47,14 +50,44 @@ public class AjouterproduitController implements Initializable {
     @FXML private JFXTextField nomproduit ;
     @FXML private JFXTextField descriptionproduit ;
     @FXML private JFXTextField villeproduit ;
+    ObservableList<String> options = 
+    FXCollections.observableArrayList(
+        "Tunis",
+        "Manouba",
+        "Ariana",
+        "Béja",
+        "Ben Arous",
+        "Bizerte",
+        "Gabes",
+        "Gafsa",
+        "Jendouba",
+        "Kairouan",
+        "Kasserine",
+        "Kebili",
+        "Kef",
+        "Mahdia",
+        "Medenine",
+        "Monastir",
+        "Nabeul",
+        "Sfax",
+        "Sidi Bouzid",
+        "Siliana",
+        "Sousse",
+        "Tataouine",
+        "Tozeur",
+        "Zaghouen"
+    );
+    @FXML private JFXComboBox<String> combo_ville ;
     @FXML private JFXTextField adresseproduit ;
     @FXML private ImageView imageproduit ;
+    String selectedVille="";
     String selectedC="" ;
     String path=" file:///C:\\\\Users\\\\samih\\\\OneDrive\\\\Bureau\\\\samih.jpg";
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         GestionCategorie Gc = new GestionCategorie();
         CRUD_USER cr = new CRUD_USER();
+        combo_ville.getItems().addAll(options);
         
      
         try {
@@ -62,7 +95,18 @@ public class AjouterproduitController implements Initializable {
         } catch (SQLException ex) {
             Logger.getLogger(AjouterproduitController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        combo_ville.getSelectionModel().selectedItemProperty()
+    .addListener(new ChangeListener<String>() {
+            //private String newValue;
+        public void changed(ObservableValue<? extends String> observable,
+                            String oldValue, String newValue) {
+            selectedVille=newValue ;
+            
+            
+            System.out.println("Value is: "+newValue);
+        }
+           
+        });
         
         categoriecombo.getSelectionModel().selectedItemProperty()
     .addListener(new ChangeListener<String>() {
@@ -103,7 +147,7 @@ public class AjouterproduitController implements Initializable {
         p.setNom(nomproduit.getText());
         p.setDescription(descriptionproduit.getText());
         p.setAdresse(adresseproduit.getText());
-        p.setVille(villeproduit.getText());
+        p.setVille(selectedVille);
         GestionCategorie Gc = new GestionCategorie();       
         p.setId_cat(Gc.getidbyname(selectedC ));
         p.setImg(path);

@@ -3,28 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package services;
+package Services;
 
-import entities.Evenement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import entities.Reservation;
+import Entities.Reservation;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import utils.DataSource;
+import Utiles.Basededonne;
 
 /**
  *
  */
 public class Crud_Reservation {
-    
-    public static void insererReservation(Reservation R){
-        Connection con = DataSource.getInstance().getCon();
+     Connection con = Basededonne.getInstance().getConnection();
+    public  void insererReservation(Reservation R){
+       
         String query = "INSERT INTO reservation VALUES(?,?)";
         try {
             PreparedStatement ste = con.prepareStatement(query);
@@ -35,8 +34,8 @@ public class Crud_Reservation {
             Logger.getLogger(Crud_Reservation.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-public static void Delete(int id) {
-		Connection con = DataSource.getInstance().getCon();
+public  void Delete(int id) {
+		
 		//int usr = E.getId();
 		String query = "DELETE FROM `reservation` WHERE id = "+id;
 		try {
@@ -48,8 +47,8 @@ public static void Delete(int id) {
 			Logger.getLogger(Crud_Reservation.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
-public static List<Reservation> findAll() {
-		Connection con = DataSource.getInstance().getCon();
+public  List<Reservation> findAll() {
+		
 		List result = new ArrayList<Reservation>();
 		String query = "select * from reservation";
 		try {

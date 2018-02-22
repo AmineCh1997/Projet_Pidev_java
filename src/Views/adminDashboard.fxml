@@ -16,10 +16,10 @@
          </font>
       </Label>
       <JFXButton layoutX="198.0" layoutY="209.0" onAction="#go_To_GestionCategorie" prefHeight="220.0" prefWidth="288.0" style="-fx-background-color: white;" text="Gérer Catalogues" />
-      <JFXButton layoutX="751.0" layoutY="479.0" prefHeight="220.0" prefWidth="288.0" style="-fx-background-color: white;" text="Gérer Evenements" />
+      <JFXButton layoutX="751.0" layoutY="479.0" onAction="#go_To_Evenements" prefHeight="220.0" prefWidth="288.0" style="-fx-background-color: white;" text="Gérer Evenements" />
       <JFXButton layoutX="752.0" layoutY="209.0" onAction="#go_gestion_user" prefHeight="220.0" prefWidth="288.0" style="-fx-background-color: white;" text="Gérer Utilisateurs" />
       <JFXButton layoutX="197.0" layoutY="479.0" onAction="#go_To_Reclamation" prefHeight="220.0" prefWidth="288.0" style="-fx-background-color: white;" text="Gérer Reclamations" />
-      <ImageView layoutX="865.0" layoutY="524.0">
+      <ImageView layoutX="872.0" layoutY="524.0">
          <image>
             <Image url="@../Utiles/icons8_Event_48px.png" />
          </image>

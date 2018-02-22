@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controllers;
+package Controller;
 
 import com.jfoenix.controls.JFXButton;
-import entities.Evenement;
+import Entities.Evenement;
 import java.net.URL;
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -16,25 +15,18 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TreeTableColumn;
-import javafx.scene.control.TreeTableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import static javafx.scene.input.KeyCode.S;
-import static javafx.scene.input.KeyCode.T;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.util.Callback;
-import services.Crud_Event;
+import Services.Crud_Event;
+import java.io.IOException;
+import javafx.event.ActionEvent;
+import javafx.scene.Node;
 
 /**
  * FXML Controller class
@@ -93,7 +85,7 @@ public class EventController implements Initializable {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Addform.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
+            stage.setScene(new Scene(root,1200,800));
             stage.show();
 
         } catch (Exception e) {
@@ -142,8 +134,9 @@ public class EventController implements Initializable {
     
 
     private void loadDetails() {
+        Crud_Event ce = new Crud_Event();
         EventList.clear();
-        EventList.addAll(Crud_Event.findAll());
+        EventList.addAll(ce.findAll());
 
         EventTab.setItems(EventList);
     }
@@ -156,4 +149,21 @@ public class EventController implements Initializable {
 	@FXML
 	private void Delete(MouseEvent event) {
 	}
+        @FXML
+    private void back_dash(ActionEvent event) throws  IOException {
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/adminDashboard.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+         AdminDashboardController ncont = fxmlLoader.<AdminDashboardController>getController();
+    
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        
+}
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entities;
+package Entities;
 
 import java.sql.Date;
 import javafx.event.ActionEvent;
@@ -12,11 +12,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import services.Crud_Event;
-import controllers.UpformController;
+import Services.Crud_Event;
+import Controller.UpformController;
 
 /**
  *
@@ -123,7 +121,7 @@ public class Evenement {
 
 	public Button getEditLink() {
 		Button edit = new Button("");
-		edit.setStyle("-fx-graphic: url('/views/edit.png');");
+		edit.setStyle("-fx-graphic: url('/Utiles/edit.png');");
 		edit.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -132,7 +130,7 @@ public class Evenement {
 					FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/UpForm.fxml"));
 					Parent root = (Parent) fxmlLoader.load();
 					Stage stage = new Stage();
-					stage.setScene(new Scene(root));
+					stage.setScene(new Scene(root,1200,800));
 					stage.show();
 					UpformController.idToEdit = id;
 
@@ -146,12 +144,13 @@ public class Evenement {
 	
 	public Button getRemoveLink() {
 		Button delete = new Button("");
-		delete.setStyle("-fx-graphic: url('/views/Delete.png');");
+		delete.setStyle("-fx-graphic: url('/Utiles/Delete.png');");
 		delete.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent event) {
-				Crud_Event.Delete(id);
+                            Crud_Event ce= new Crud_Event();
+				ce.Delete(id);
 			}
 		});
 		return delete;

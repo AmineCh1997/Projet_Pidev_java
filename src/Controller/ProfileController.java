@@ -46,7 +46,7 @@ public class ProfileController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         String PathImage = InscriController.current_user.getPhoto_profile();
-        System.out.println(InscriController.current_user);
+//        System.out.println(InscriController.current_user);
        // System.out.println(PathImage);
   NomLabel.setText(InscriController.current_user.getNomuser());
   PrenomLabel.setText(InscriController.current_user.getPrenomuser());
