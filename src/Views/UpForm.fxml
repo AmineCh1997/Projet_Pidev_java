@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpformController">
+   <top>
+      <Pane prefHeight="72.0" prefWidth="600.0" style="-fx-background-color: pink;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="188.0" layoutY="1.0" text="Update Event" textFill="#170101">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="66.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="45.0" layoutY="27.0" prefHeight="278.0" prefWidth="198.0">
+               <children>
+                  <JFXTextField fx:id="Description" prefHeight="20.0" prefWidth="198.0" promptText="Description">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="Adresse" prefHeight="24.0" prefWidth="198.0" promptText="Adresse">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="Image" prefHeight="21.0" prefWidth="198.0" promptText="Image">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <DatePicker fx:id="Datedebut" prefHeight="45.0" prefWidth="198.0" promptText="Date Debut" />
+               </children>
+            </VBox>
+            <VBox layoutX="289.0" layoutY="23.0" prefHeight="248.0" prefWidth="245.0">
+               <children>
+                  <DatePicker fx:id="Datefin" prefHeight="40.0" prefWidth="245.0" promptText="Date Fin" />
+                  <JFXTextField fx:id="nbr" prefHeight="45.0" prefWidth="245.0" promptText="Nombre de participants">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="total" prefHeight="38.0" prefWidth="245.0" promptText="Nombre Tickets">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="IDP" prefHeight="40.0" prefWidth="245.0" promptText="ID Produit" />
+               </children>
+            </VBox>
+            <JFXButton fx:id="submit" alignment="CENTER" contentDisplay="CENTER" layoutX="196.0" layoutY="241.0" onMouseClicked="#Update" prefHeight="51.0" prefWidth="150.0" style="-fx-background-color: ;" text="SUBMIT" textFill="#1b0cee">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
