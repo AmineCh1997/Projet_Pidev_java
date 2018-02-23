@@ -35,7 +35,7 @@
                   <Image url="@../Utiles/icons8_Warning_Shield_48px_1.png" />
                </image>
             </ImageView>
-            <JFXButton focusTraversable="false" layoutX="816.0" layoutY="17.0" prefHeight="48.0" prefWidth="47.0" text="." />
+            <JFXButton focusTraversable="false" layoutX="816.0" layoutY="17.0" onAction="#go_to_Reclamation" prefHeight="48.0" prefWidth="47.0" text="." />
          </children>
       </AnchorPane>
       <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="240.0" layoutY="81.0" prefHeight="720.0" prefWidth="720.0" AnchorPane.topAnchor="81.0">
@@ -43,5 +43,7 @@
             <AnchorPane fx:id="anchorpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" />
          </content>
       </ScrollPane>
+      <JFXButton layoutX="29.0" layoutY="341.0" onAction="#go_to_ajout_pub" text="Ajouter publication" />
+      
    </children>
 </AnchorPane>

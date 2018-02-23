@@ -147,5 +147,36 @@ public class MenuController implements Initializable {
         stage.show();
         
     }
+    @FXML
+    private void go_to_ajout_pub(ActionEvent event) throws IOException {
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/ajout.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+    AjoutController ncont = fxmlLoader.<AjoutController>getController();
     
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();
+        
+    } 
+    @FXML
+    private void go_to_Reclamation(ActionEvent event) throws IOException {
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/FXMLAjout.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+    FXMLAjoutController ncont = fxmlLoader.<FXMLAjoutController>getController();
+    
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();
+        
+    } 
 }

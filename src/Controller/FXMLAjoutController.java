@@ -74,38 +74,15 @@ public void ajouter_reclamation(ActionEvent event ) throws SQLException,IOExcept
   
 }
  }
-public void affiche (ActionEvent event ) throws SQLException,IOException
-{
-    FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/FXMLAdminReclam.fxml"));
-            Parent root = ( Parent ) fxmlloader.load();
-     
-            FXMLAdminReclamController Adminct= fxmlloader.<FXMLAdminReclamController>getController();
-            Scene scene = new Scene(root,1200,800);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-    
-}
 
-public void modifier (ActionEvent event ) throws SQLException,IOException
-{
-    FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/Modifier.fxml"));
-            Parent root = ( Parent ) fxmlloader.load();
-     
-            ModifierController Adminct1= fxmlloader.<ModifierController>getController();
-            Scene scene = new Scene(root,1200,800);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-    
-}
+
 
 public void retour4 (ActionEvent event ) throws SQLException,IOException
 {
-    FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Projet_Pidev/Acceuil.fxml"));
+    FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/Menu.fxml"));
             Parent root = ( Parent ) fxmlloader.load();
      
-            AcceuilController Adminct5= fxmlloader.<AcceuilController>getController();
+            MenuController Adminct5= fxmlloader.<MenuController>getController();
             Scene scene = new Scene(root,1200,800);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);

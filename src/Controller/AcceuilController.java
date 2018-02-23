@@ -46,16 +46,6 @@ public class AcceuilController implements Initializable {
             stage.show();
   }
     
-    public void abonnement (ActionEvent event ) throws SQLException,IOException
-    {
-       FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/Views/Abonnement.fxml"));
-            Parent root = ( Parent ) fxmlloader.load();
-     
-            AbonnementController Adminct6= fxmlloader.<AbonnementController>getController();
-            Scene scene = new Scene(root,1200,800);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-  }
+   
     
 }

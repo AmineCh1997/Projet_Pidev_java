@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import Utiles.DataSource;
+import Utiles.Basededonne;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -21,7 +21,7 @@ import java.sql.Statement;
  * @author ESPRIT
  */
 public class CrudAvis {
-    Connection con=DataSource.getInstance().getConnection();
+    Connection con=Basededonne.getInstance().getConnection();
         Statement ste;
         ResultSet rs;
     public void afficherlesavis() throws SQLException 

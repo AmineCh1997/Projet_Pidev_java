@@ -25,5 +25,6 @@
       </Pane>
       <JFXButton layoutX="592.0" layoutY="550.0" onAction="#ajout" style="-fx-background-color: white;" text="Ajouter Bon Plan" />
       <JFXButton layoutX="1051.0" layoutY="74.0" onAction="#back_menu" style="-fx-background-color: white;" text="Menu" />
+      <JFXButton layoutX="890.0" layoutY="550.0" onAction="#modifier_produit" style="-fx-background-color: white;" text="Modifier Bon plan " />
    </children>
 </AnchorPane>

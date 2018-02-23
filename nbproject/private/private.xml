@@ -3,20 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Controller/AffichageAbonnementController.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Entities/ButtonCellReclamation.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Entities/Reclamation.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/projet_pidev/Projet_Pidev.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Controller/InscriController.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Controller/ModifierproduitController.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Controller/AfficherproduitController.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Services/GestionProduit.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Utiles/Basededonne.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Entities/Abonnement.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Views/Inscri.fxml</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Controller/AffichageController.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Controller/Gerer_userController.java</file>
-            <file>file:/C:/Users/Yacine/Documents/GitHub/Projet_Pidev_java/src/Views/afficherproduit.fxml</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/AjoutController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/FXMLAjoutController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/MenuController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/ProfileController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/projet_pidev/Projet_Pidev.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/ModifierproduitController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/crudPublication.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Utiles/Basededonne.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/AfficherproduitController.java</file>
         </group>
     </open-files>
 </project-private>

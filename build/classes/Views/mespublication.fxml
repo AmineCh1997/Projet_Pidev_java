@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="Controller.MespublicationController">
+   <children>
+      <AnchorPane fx:id="anchorpane" prefHeight="800.0" prefWidth="1200.0">
+         <children>
+            <JFXButton fx:id="retour" layoutX="1054.0" layoutY="69.0" onAction="#retour" text="Retour" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

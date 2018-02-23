@@ -16,16 +16,14 @@ import static java.util.Collections.list;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import Utiles.DataSource;
+
 
 /**
  *
  * 
  */
 public class commentaire {
-    Connection con =DataSource.getInstance().getConnection();
-    private Statement ste ; private ResultSet rs;
-    private PreparedStatement ps ;
+
 
    
     private int id_commentaire;
@@ -73,13 +71,7 @@ public class commentaire {
         this.texte = texte;
     }
      public commentaire() {
-        try{
-            ste=con.createStatement();
-        }
-        catch(SQLException ex)
-        {
-            System.out.println(ex);
-        }
+       
     }
 
     public commentaire(int id_commentaire, String texte) {
@@ -93,13 +85,6 @@ public class commentaire {
         this.iduser = iduser;
         this.id_produit = id_produit;
         this.texte = texte;
-         try{
-            ste=con.createStatement();
-        }
-        catch(SQLException ex)
-        {
-            System.out.println(ex);
-        }
          
     }
 

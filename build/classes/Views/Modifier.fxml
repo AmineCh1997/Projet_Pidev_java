@@ -2,45 +2,62 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
-<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F0675E;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifierController">
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F0675E;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifierController">
    <children>
-      <Text layoutX="21.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez l'id de la reclamation à modifier">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Text>
-      <JFXTextField fx:id="idupdate" layoutX="32.0" layoutY="49.0" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: white;" />
-      <Text layoutX="27.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modification" underline="true">
+      <Text layoutX="88.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modification" underline="true">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <JFXTextArea fx:id="sujetupdate" layoutX="113.0" layoutY="173.0" prefHeight="60.0" prefWidth="374.0" style="-fx-background-color: white;" />
-      <JFXTextArea fx:id="reclamupdate" layoutX="113.0" layoutY="270.0" prefHeight="138.0" prefWidth="374.0" style="-fx-background-color: white;" />
-      <Text layoutX="38.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sujet">
+      <JFXTextArea fx:id="sujetupdate" layoutX="33.0" layoutY="151.0" prefHeight="89.0" prefWidth="230.0" style="-fx-background-color: white;" />
+      <JFXTextArea fx:id="reclamupdate" layoutX="33.0" layoutY="307.0" prefHeight="172.0" prefWidth="230.0" style="-fx-background-color: white;" />
+      <Text layoutX="118.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sujet">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="9.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclamation">
+      <Text layoutX="99.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclamation">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <JFXButton buttonType="RAISED" layoutX="377.0" layoutY="438.0" onAction="#modifier_reclamation" style="-fx-background-color: grey;" text="Enregistrer">
+      <JFXButton buttonType="RAISED" layoutX="93.0" layoutY="542.0" onAction="#modifier_reclamation" style="-fx-background-color: grey;" text="Enregistrer">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="620.0" layoutY="487.0" onAction="#retour3" style="-fx-background-color: grey;" text="Retour">
+      <JFXButton layoutX="632.0" layoutY="511.0" onAction="#retour3" style="-fx-background-color: grey;" text="Retour">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
+      <TableView fx:id="reclamTable" layoutX="285.0" layoutY="62.0" onMouseClicked="#Reclam_Modif" prefHeight="387.0" prefWidth="476.0">
+         <columns>
+            <TableColumn fx:id="ID" prefWidth="37.000030517578125" text="ID" />
+            <TableColumn fx:id="Sujet" editable="true" prefWidth="75.0" text="Sujet" />
+            <TableColumn fx:id="Reclamation" prefWidth="113.0" text="Reclamation" />
+            <TableColumn fx:id="Date" prefWidth="68.0" text="Date" />
+            <TableColumn fx:id="BoutonModif" prefWidth="82.0" text="Modifier" />
+            <TableColumn fx:id="BoutonSupp" prefWidth="99.0" text="Supprimer" />
+         </columns>
+      </TableView>
+      <ImageView layoutX="114.0" layoutY="14.0">
+         <image>
+            <Image url="@../Utiles/icons8_Maintenance_48px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="128.0" layoutY="503.0">
+         <image>
+            <Image url="@../Utiles/icons8_Save_48px_1.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

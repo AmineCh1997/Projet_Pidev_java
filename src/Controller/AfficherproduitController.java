@@ -321,7 +321,21 @@ public class AfficherproduitController implements Initializable {
         stage.setScene(scene);
         stage.show();   
     }
+     @FXML
+    public void modifier_produit(ActionEvent event) throws IOException
+    {
+      FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/modifierproduit.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+    ModifierproduitController ncont = fxmlLoader.<ModifierproduitController>getController();
     
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();   
+    }
     
     
 }

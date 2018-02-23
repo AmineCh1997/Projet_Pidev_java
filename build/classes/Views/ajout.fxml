@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
@@ -12,10 +13,11 @@
       <JFXButton fx:id="ajouter_publication" layoutX="478.0" layoutY="513.0" onAction="#ajouter_publication" style="-fx-background-color: white;" text="Ajouter" />
       <JFXTextArea fx:id="contenu" focusColor="#0a0c17" layoutX="202.0" layoutY="245.0" unFocusColor="#1e1313" />
       <Label layoutX="299.0" layoutY="153.0" prefHeight="78.0" prefWidth="248.0" text="Contenu de votre publication" />
-      <JFXButton fx:id="afficher" layoutX="61.0" layoutY="185.0" onAction="#afficher_publication" style="-fx-background-color: white;" text="Afficher" />
-      <JFXButton fx:id="modifier_publication" layoutX="61.0" layoutY="255.0" onAction="#modifier_publication" style="-fx-background-color: white;" text="Modifier" />
-      <JFXButton fx:id="supprimer_publication" layoutX="61.0" layoutY="323.0" onAction="#supprimer_publication" style="-fx-background-color: white;" text="Supprimer" />
       <JFXButton fx:id="selectionner_photo" layoutX="916.0" layoutY="449.0" onAction="#uploadImage" text="Selectionner phto" />
       <ImageView fx:id="imagepublication" fitHeight="269.0" fitWidth="395.0" layoutX="777.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXComboBox fx:id="categoriecombo" layoutX="282.0" layoutY="47.0" prefHeight="32.0" prefWidth="131.0" promptText="Categorie" />
+      <JFXComboBox fx:id="comboville" layoutX="451.0" layoutY="47.0" prefHeight="32.0" prefWidth="110.0" promptText="Ville" />
+      <JFXComboBox fx:id="comboproduit" layoutX="600.0" layoutY="47.0" prefHeight="32.0" prefWidth="101.0" promptText="Produit" />
+      <JFXButton fx:id="retour" layoutX="1036.0" layoutY="51.0" onAction="#back" text="Retour" />
     </children>
 </AnchorPane>
