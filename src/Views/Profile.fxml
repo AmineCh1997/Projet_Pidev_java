@@ -2,12 +2,13 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfileController">
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfileController">
    <children>
       <Label focusTraversable="false" layoutX="61.0" layoutY="104.0" text="Nom : " textFill="#0022ff" underline="true">
          <font>
@@ -34,12 +35,17 @@
       </Label>
       <Label fx:id="PrenomLabel" layoutX="199.0" layoutY="183.0" prefHeight="30.0" prefWidth="292.0" />
       <ImageView id="ImageUser" fx:id="ImageUser" fitHeight="615.0" fitWidth="674.0" layoutX="494.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true" />
-      <JFXButton focusTraversable="false" layoutX="494.0" layoutY="122.0" onAction="#upload_action" prefHeight="615.0" prefWidth="674.0" text="." />
+      <JFXButton focusTraversable="false" layoutX="630.0" layoutY="60.0" onAction="#upload_action" prefHeight="424.0" prefWidth="403.0" text="." />
       <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="1120.0" layoutY="29.0">
          <image>
             <Image url="@../Utiles/icons8_Go_Back_48px_1.png" />
          </image>
       </ImageView>
       <JFXButton focusTraversable="false" layoutX="1121.0" layoutY="28.0" onAction="#go_Back_Menu" prefHeight="48.0" prefWidth="48.0" text="." />
+      <ScrollPane fx:id="SP" layoutX="852.0" layoutY="516.0" prefHeight="355.0" prefWidth="348.0">
+         <content>
+            <AnchorPane fx:id="AP" prefHeight="426.0" prefWidth="415.0" style="-fx-background-color: white;" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

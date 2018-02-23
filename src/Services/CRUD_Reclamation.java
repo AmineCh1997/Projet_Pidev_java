@@ -43,17 +43,17 @@ public class CRUD_Reclamation {
         
         
         
-        public void modifierReclamation(Reclamation rec , Integer i){
+        public void modifierReclamation(Reclamation rec){
         
         java.util.Date date_util = new java.util.Date();
         java.sql.Date date_sql = new java.sql.Date(date_util.getTime());
         try {
-             String req = "update reclamation set sujet=?,textereclamation=? where id = ?";
+             String req = "update reclamation set sujet=?,textereclamation=? where id ='"+rec.getId()+"' ?";
         PreparedStatement preparedStatement;
             preparedStatement = (PreparedStatement) con.prepareStatement(req);
             preparedStatement.setString(1, rec.getSujet());
             preparedStatement.setString(2, rec.getTextereclamation());
-            preparedStatement.setInt(3, i);
+            //preparedStatement.setInt(3, i);
             
             preparedStatement.executeUpdate();
         } catch (SQLException ex) {
@@ -103,6 +103,8 @@ public class CRUD_Reclamation {
                 Reclamation r = new Reclamation();
                 r.setId(rs.getInt("id"));
                 r.setSujet(rs.getString("sujet"));
+                r.setTexte_reclamation(rs.getString("textereclamation"));
+
                 r.setDate(rs.getDate("date"));
                 listereclam.add(r);
             }

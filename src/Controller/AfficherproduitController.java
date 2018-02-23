@@ -5,21 +5,32 @@
  */
 package Controller;
 
+import Entities.Abonnement;
+import Entities.Produit;
+import Services.CRUD_Abonnement;
+import Services.GestionCategorie;
+import Services.GestionProduit;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -28,14 +39,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import Services.GestionCategorie;
-import Services.GestionProduit;
-import Entities.Produit;
-import java.io.IOException;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
@@ -47,6 +50,8 @@ public class AfficherproduitController implements Initializable {
 
     String selectedC ="";
     String beforeselectedC="";
+    List<Integer> listabn;
+    CRUD_Abonnement ca;
     @FXML
     private ComboBox<String> categoriecombo1 ;
     @FXML
@@ -70,11 +75,13 @@ public class AfficherproduitController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         selectedP = new Produit();
-        
+        ca= new CRUD_Abonnement();
+        listabn= ca.afficheridprodAbonnement(InscriController.current_user.getId());
 
         
         GestionProduit Gp = new GestionProduit();
          GestionCategorie Gc = new GestionCategorie();
+         //CRUD_Abonnement cr = new CRUD_Abonnement();
         
         try {
             categoriecombo1.getItems().addAll(Gc.afficher_categorieList());
@@ -112,6 +119,15 @@ public class AfficherproduitController implements Initializable {
          int a =Gc.getidbyname(selectedC);
         return Gp.afficher_produitBycategorie1(a);
     }
+    public void BasculeAb(ImageView N1,ImageView N2){
+        if(N1.isVisible()) {
+            N1.setVisible(false);
+            N2.setVisible(true);
+        }else {
+            N1.setVisible(true);
+            N2.setVisible(false);
+        }
+    }
     public void afficherproduits(List<Produit> produits)
     {
         int taille = produits.size();
@@ -122,25 +138,110 @@ public class AfficherproduitController implements Initializable {
         {
            
             Pane currentPane= new Pane();
+            //Pane ABPane = new Pane();
             currentPane.getChildren().clear();
             Label nomproduit =new Label();
             Label Descriptionproduit = new Label();
             JFXButton button = new JFXButton();
+            
+            ImageView abonne = new ImageView(new Image("/Utiles/coeur2.png",50,50,true,true));
+            ImageView desabonne = new ImageView(new Image("/Utiles/coeur.png",50,50,true,true));
+            AnchorPane abonnePane = new AnchorPane();
+//            AnchorPane desabonnePane = new AnchorPane();
+            JFXButton boutonabonner = new JFXButton();
+
+            
+            
+
+            
             EventHandler Clicked = new EventHandler() {
                     @Override
                     public void handle(Event event) {
-                        
+                        System.out.println("click");
                         selectedP=produits.stream()
                                 .filter(p->p.getId()==Integer.parseInt(currentPane.getId()))
                                 .findFirst().get();
                         afficherproduitselec(selectedP);
                     }
                 };
+            
+            
+            
+            EventHandler abonner;
+              
+            //boutton ta7t taswiraz
+            abonner = new EventHandler() {
+                @Override
+                public void handle(Event event) {
+                    //System.out.println("click");
+                     selectedP=produits.stream()
+                                .filter(p->p.getId()==Integer.parseInt(currentPane.getId()))
+                                .findFirst().get();
+                    if(desabonne.isVisible()==false)
+                    {
+                        
+                            //System.out.println("false");
+                            //abonne.setImage();
+                            
+                      
+                            BasculeAb(abonne,desabonne);
+                            CRUD_Abonnement cr = new CRUD_Abonnement();
+                            Abonnement a = new Abonnement();
+
+                        try {
+                            cr.ajouterAbonnement(selectedP.getId());
+                            //System.out.println(selectedP.getId());
+                        } catch (SQLException ex) {
+                            Logger.getLogger(AfficherproduitController.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+ }
+                    else 
+                    {
+                        //System.out.println("else");
+                        //desabonne.setImage();
+                        
+                     
+                        
+                        BasculeAb(abonne,desabonne);
+                        CRUD_Abonnement cr = new CRUD_Abonnement();
+                        Abonnement a = new Abonnement();
+                        cr.supprimerAbonnement(selectedP.getId());
+                    }
+                    
+                    
+                }
+            };
+             
+          desabonne.setLayoutX(0);
+          desabonne.setLayoutY(0);
+            abonne.setLayoutX(0);
+           abonne.setLayoutY(0);
+              boutonabonner.setOnAction(abonner);
+          
+            abonne.setVisible(true);            
+            desabonne.setVisible(false);
+            
+           
+            if(listabn.contains(produits.get(i).getId()))
+                BasculeAb(abonne, desabonne);
+            //abonne.onMouseClickedProperty();
+            
+          
+            boutonabonner.setPrefSize(50, 50);
+         
+           
+            //abonne.onMouseClickedProperty().setValue(abonner);
+            //desabonne.onMouseClickedProperty().setValue(desabonner);
+            
+           
+            //CHAKALA
+            
              button.setLayoutX(0);
              button.setLayoutY(0);
              button.setPrefSize(175, 175);
              button.setStyle("-fx-border-color:#F43955");
              button.setOnAction(Clicked);
+             
             //label
             nomproduit.setLayoutX(49);
             nomproduit.setLayoutY(130);
@@ -151,6 +252,7 @@ public class AfficherproduitController implements Initializable {
             Descriptionproduit.setPrefSize(90, 18);  
             Descriptionproduit.setText("Description : "+((Produit)produits.get(i)).getDescription());
             //pane
+            
             currentPane.setLayoutX((i%2)*195+20); 
             currentPane.setLayoutY((i/2)*195+50);
             currentPane.setPrefSize(175, 175);
@@ -159,12 +261,19 @@ public class AfficherproduitController implements Initializable {
             currentPane.setId(String.valueOf(((Produit)produits.get(i)).getId()));
     
     //add components to pane
+            abonnePane.getChildren().add(abonne);
+            abonnePane.getChildren().add(desabonne);
+            abonnePane.getChildren().add(boutonabonner);
+
+
             currentPane.getChildren().add(button);
             currentPane.getChildren().add(nomproduit);
             currentPane.getChildren().add(Descriptionproduit);
+            currentPane.getChildren().add(abonnePane);
     
      //add pane to Anchorpane       
-             AP.getChildren().add(currentPane); 
+             AP.getChildren().add(currentPane);
+            
        
         } 
     }

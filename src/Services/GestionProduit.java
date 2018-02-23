@@ -91,7 +91,7 @@ public class GestionProduit {
         return listeprod ;
         
     }
-     public List<Produit> getproduitbyuser(int id_user) throws SQLException
+    public List<Produit> getproduitbyuser(int id_user) throws SQLException
     {
          String req="select * from produit where id_user='"+id_user+"' ";
         ste=con.createStatement();
@@ -126,7 +126,29 @@ public class GestionProduit {
         
     }
     
-    
+    public List<Produit> afficher_produit() throws SQLException
+    {
+        String req="select * from produit INNER JOIN abonnement ON produit.id = abonnement.id_produit";
+        ste=con.createStatement();
+        rs=ste.executeQuery(req);
+        //ObservableList<String> listecat = new FXCollections.observableArrayList
+        List<Produit> listeprod = new ArrayList<>();
+       
+        while(rs.next())
+            
+        {
+             Produit p = new Produit();
+             p.setDescription(rs.getString("description"));
+            p.setId(rs.getInt("id"));
+            p.setNom(rs.getString("nom"));
+           p.setImg(rs.getString("photo"));
+           p.setVille(rs.getString("ville"));
+            listeprod.add(p);
+          
+        }
+        return listeprod ;
+        
+    }
     
     
     

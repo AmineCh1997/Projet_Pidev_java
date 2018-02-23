@@ -8,6 +8,7 @@ package Services;
 // samih    
 
 import Entities.Abonnement;
+import Controller.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,11 +33,13 @@ public class CRUD_Abonnement {
     
     
     
-    public void ajouterAbonnement(Abonnement a) throws SQLException {
+    public void ajouterAbonnement(int id_produit) throws SQLException {
       
-       PreparedStatement st=(PreparedStatement) con.prepareStatement("INSERT INTO abonnement () VALUES()");
-//       st.setInt(1,0);
-       //st.setInt(2,id_produit);
+       PreparedStatement st=(PreparedStatement) con.prepareStatement("INSERT INTO abonnement (id_user,id_produit) VALUES(?,?)");
+       int b = InscriController.current_user.getId();
+       
+        st.setInt(1,b);
+       st.setInt(2,id_produit);
        st.execute();
        }
     
@@ -56,15 +59,39 @@ public class CRUD_Abonnement {
         }
     }
     
-    public List<Abonnement> afficherAbonnement()
+    public List<Integer> afficheridprodAbonnement(int id_user)
         {
-            List<Abonnement> listeAbon = new ArrayList<>();
+            List<Integer> listeAbon = new ArrayList<>();
          try {
              
              ste=con.createStatement();
+              PreparedStatement ps=con.prepareStatement("select * from abonnement where id_user=?");
+              ps.setInt(1, id_user);
              //ResultSet rs=ste.executeQuery("select * from produit INNER JOIN abonnement ON produit.id = abonnement.id_produit");
-            ResultSet rs=ste.executeQuery("select * from abonnement where id_produit=1");
+            ResultSet rs=ps.executeQuery();
+            
+             while ( rs.next())
+             {
+                 
+                 listeAbon.add(rs.getInt("id_produit"));
+             }
+             
+         } catch (SQLException ex) {
+             Logger.getLogger(CRUD_Abonnement.class.getName()).log(Level.SEVERE, null, ex);
+         }
+         return listeAbon;
+        }
 
+    public List<Abonnement> afficherAbonnement() {
+         List<Abonnement> listeAbon = new ArrayList<>();
+         try {
+             
+             ste=con.createStatement();
+              PreparedStatement ps=con.prepareStatement("select * from abonnement");
+              
+             //ResultSet rs=ste.executeQuery("select * from produit INNER JOIN abonnement ON produit.id = abonnement.id_produit");
+            ResultSet rs=ps.executeQuery();
+            
              while ( rs.next())
              {
                  Abonnement current= new Abonnement(rs.getInt("id_user"),rs.getInt("id_produit"));
@@ -74,9 +101,29 @@ public class CRUD_Abonnement {
          } catch (SQLException ex) {
              Logger.getLogger(CRUD_Abonnement.class.getName()).log(Level.SEVERE, null, ex);
          }
-         return listeAbon;
-        }
-    
+         return listeAbon; 
+    }
+    public List<Abonnement> afficherAbonnement(int id_user) {
+         List<Abonnement> listeAbon = new ArrayList<>();
+         try {
+             
+             ste=con.createStatement();
+              PreparedStatement ps=con.prepareStatement("select * from abonnement where id_user=?");
+              ps.setInt(1, id_user);
+             //ResultSet rs=ste.executeQuery("select * from produit INNER JOIN abonnement ON produit.id = abonnement.id_produit");
+            ResultSet rs=ps.executeQuery();
+            
+             while ( rs.next())
+             {
+                 Abonnement current= new Abonnement(rs.getInt("id_user"),rs.getInt("id_produit"));
+                 listeAbon.add(current);
+             }
+             
+         } catch (SQLException ex) {
+             Logger.getLogger(CRUD_Abonnement.class.getName()).log(Level.SEVERE, null, ex);
+         }
+         return listeAbon; 
+    }
     
     
 }

@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 public class Basededonne {
     private static Basededonne instance;
     private Connection connection;
-    private String url = "jdbc:mysql://127.0.0.1/projetpidev1";
+    private String url = "jdbc:mysql://127.0.0.1/bon_plan";
     private String username = "root";
     private String password = "";
 
