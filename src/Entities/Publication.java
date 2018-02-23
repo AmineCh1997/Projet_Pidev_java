@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Entities;
 
 import java.sql.Date;
@@ -13,11 +12,13 @@ import java.sql.Date;
  * @author emirc
  */
 public class Publication {
+
     private int id;
     private String contenu;
     private String photo;
     private int iduser;
     private Date datepublication;
+    private int idproduit;
 
     public Publication() {
     }
@@ -78,6 +79,51 @@ public class Publication {
     public Publication(int id, String contenu) {
         this.id = id;
         this.contenu = contenu;
+    }
+
+    public Publication(String contenu, String photo, int idproduit) {
+        this.contenu = contenu;
+        this.photo = photo;
+
+        this.idproduit = idproduit;
+    }
+
+    public int getIdproduit() {
+        return idproduit;
+    }
+
+    public void setIdproduit(int idproduit) {
+        this.idproduit = idproduit;
+    }
+
+    public Publication(String contenu, String photo, int iduser, int idproduit) {
+        this.contenu = contenu;
+        this.photo = photo;
+        this.iduser = iduser;
+        this.idproduit = idproduit;
+    }
+
+    public int getIduser() {
+        return iduser;
+    }
+
+    public void setIduser(int iduser) {
+        this.iduser = iduser;
+    }
+
+    public Publication(String contenu, String photo, Date datepublication, int idproduit) {
+        this.contenu = contenu;
+        this.photo = photo;
+        this.datepublication = datepublication;
+        this.idproduit = idproduit;
+    }
+
+    public Publication(int id, String contenu, String photo, Date datepublication, int idproduit) {
+        this.id = id;
+        this.contenu = contenu;
+        this.photo = photo;
+        this.datepublication = datepublication;
+        this.idproduit = idproduit;
     }
     
     
