@@ -33,7 +33,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
 
 
 /**
@@ -163,6 +162,21 @@ public class AjouterproduitController implements Initializable {
         
         
     AfficherproduitController ncont = fxmlLoader.<AfficherproduitController>getController();
+    
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();   
+    }
+    
+            public void go_to_menu(ActionEvent event) throws IOException
+    {
+      FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/AjouterMenu.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+    AjouterMenuController ncont = fxmlLoader.<AjouterMenuController>getController();
     
         Scene scene = new Scene(root,1200,800);
         Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;

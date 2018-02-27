@@ -99,9 +99,9 @@ public class ModifierproduitController implements Initializable {
         GestionProduit Gp = new GestionProduit();
         
         try {
-            for(int i=0 ; i<Gp.getproduitbyuser(1).size() ;i++)
+            for(int i=0 ; i<Gp.getproduitbyuser(InscriController.current_user.getId()).size() ;i++)
             {
-                nomdesproduits.add(Gp.getproduitbyuser(1).get(i).getNom());
+                nomdesproduits.add(Gp.getproduitbyuser(InscriController.current_user.getId()).get(i).getNom());
                 
             }
         } catch (SQLException ex) {
@@ -145,6 +145,7 @@ public class ModifierproduitController implements Initializable {
             System.out.println(InscriController.current_user.getId());
             int iduser=InscriController.current_user.getId();
             GestionProduit Gp = new GestionProduit();
+           
             for(int i =0 ; i<Gp.getproduitbyuser(iduser).size() ;i++)
             {
                 if(selectedP.equals(Gp.getproduitbyuser(iduser).get(i).getNom()))
@@ -176,15 +177,14 @@ public class ModifierproduitController implements Initializable {
             msg=msg.replace("\\","/");
             photoproduit.setImage(new Image(msg,400,250,true,true));           
             path=msg ;
-        System.out.println(path);
-           
+//        System.out.println(path);
        }
-       
     }
+      
      public void changer_info(ActionEvent event) throws SQLException
      {
          Produit P = new Produit();
-         P.setId_user(1);
+         P.setId_user(InscriController.current_user.getId());
          P.setId(idcurrentprod);
          P.setNom(nomproduit.getText());
          P.setVille(selectedV);

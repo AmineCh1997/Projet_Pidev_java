@@ -15,10 +15,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import Entities.user;
 import Services.CRUD_USER;
+import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXRadioButton;
 import java.io.IOException;
-import static java.lang.Integer.max;
-import static java.lang.Integer.min;
-import static java.lang.Long.max;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,10 +32,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import static java.lang.Math.max;
-import static java.lang.Math.min;
-import static java.util.Collections.max;
-import static javax.swing.Spring.max;
+import javafx.scene.layout.Pane;
 
 
 /**
@@ -45,7 +41,7 @@ import static javax.swing.Spring.max;
  */
 public class FXMLDocumentController implements Initializable {
     
-  
+   @FXML  Pane child_pane;
     @FXML JFXTextField TextFname;
     @FXML JFXTextField TextLname;
     @FXML JFXTextField TextPseudo;
@@ -75,6 +71,10 @@ public class FXMLDocumentController implements Initializable {
     private JFXButton btnContinue;
     @FXML
     private JFXButton btnTest;
+    @FXML
+    private JFXRadioButton user_box;
+    @FXML
+    private JFXRadioButton planneur_box;
    public static String message ; 
     
     @Override
@@ -177,29 +177,31 @@ public class FXMLDocumentController implements Initializable {
         }
         if (!list.stream().anyMatch(e->e==1))
         {
-           user U=new user(TextFname.getText(),TextLname.getText(),TextPseudo.getText(),TextEmail.getText(),TextPassword.getText(),TextPhone.getText(),0);  
+            if(planneur_box.isSelected()){
+           user U=new user(TextFname.getText(),TextLname.getText(),TextPseudo.getText(),TextEmail.getText(),TextPassword.getText(),TextPhone.getText(),3);  
 //             CRUD_USER crud=new CRUD_USER();
 //             crud.insertST(U);
+                 user_box.setSelected(false);
              InscriController.current_user= U ;
+            }
+            else if (user_box.isSelected()){
+                user U=new user(TextFname.getText(),TextLname.getText(),TextPseudo.getText(),TextEmail.getText(),TextPassword.getText(),TextPhone.getText(),0);  
+//             CRUD_USER crud=new CRUD_USER();
+//             crud.insertST(U);
+             planneur_box.setSelected(false);
+             InscriController.current_user= U ;
+            }
               Mail email = new Mail();
                 String s = Long.toHexString(Double.doubleToLongBits(Math.random()));
        s=s.substring(10);
        s=s.toString().toUpperCase();
        message=s ;
       email.Send(message,TextEmail.getText());
-               FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Confirmation.fxml"));
-        Parent root = (Parent)fxmlLoader.load();
-        
-       ConfirmationController ncont = fxmlLoader.<ConfirmationController>getController();
-        Scene scene = new Scene(root,1200,800);
-        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
-        
-        stage.setScene(scene);
-        stage.show();
-             //crud.displayAll().forEach(System.out::println);
-             //crud.insertPst(p);
-             //crud.delete(73);
-             //crud.update(p);
+               Pane newLoadedPane = FXMLLoader.load(getClass().getResource("/Views/Confirmation.fxml"));
+      child_pane.getChildren().add(newLoadedPane);
+      MainAnchor.setDisable(true);
+   
+     
         }    
         
         

@@ -3,6 +3,8 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -48,5 +50,21 @@
          </content>
       </ScrollPane>
       <JFXButton layoutX="87.0" layoutY="481.0" onAction="#go_to_pub" text="Mes publications" />
+      <JFXButton layoutX="157.0" layoutY="549.0" text="Mes Reclamations" />
+      <ScrollPane layoutX="46.0" layoutY="592.0" prefHeight="200.0" prefWidth="440.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="mesreclamations" prefHeight="200.0" prefWidth="423.0">
+                    <columns>
+                      <TableColumn fx:id="sujet" prefWidth="104.0" text="Sujet" />
+                      <TableColumn fx:id="reclamation" prefWidth="205.0" text="Reclamation" />
+                        <TableColumn fx:id="etat" prefWidth="113.0" text="Etat" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

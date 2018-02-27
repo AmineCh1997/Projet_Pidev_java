@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #86CBFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AfficherproduitController">
    <children>
-      <ScrollPane fx:id="SP" layoutX="28.0" layoutY="105.0" prefHeight="432.0" prefWidth="426.0">
+      <ScrollPane fx:id="SP" fitToHeight="true" fitToWidth="true" layoutX="87.0" layoutY="132.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: ;">
          <content>
-            <AnchorPane fx:id="AP" prefHeight="426.0" prefWidth="415.0" />
+            <AnchorPane fx:id="AP" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #86CBFF;" />
          </content></ScrollPane>
-      <ComboBox fx:id="categoriecombo1" layoutX="161.0" layoutY="14.0" prefWidth="150.0" promptText="Catalogues" />
-      <Pane layoutX="454.0" layoutY="43.0" prefHeight="481.0" prefWidth="407.0">
-         <children>
-            <JFXTextArea fx:id="informationsproduit" layoutX="83.0" layoutY="323.0" prefHeight="151.0" prefWidth="221.0" />
-            <JFXTextArea fx:id="nomproduit" layoutX="62.0" layoutY="6.0" prefHeight="48.0" prefWidth="94.0" />
-            <JFXTextArea fx:id="villeproduit" layoutX="241.0" layoutY="14.0" prefHeight="25.0" prefWidth="70.0" />
-            <ImageView fx:id="imageproduit" fitHeight="203.0" fitWidth="294.0" layoutX="17.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </Pane>
-      <JFXButton layoutX="592.0" layoutY="550.0" onAction="#ajout" style="-fx-background-color: white;" text="Ajouter Bon Plan" />
-      <JFXButton layoutX="1051.0" layoutY="74.0" onAction="#back_menu" style="-fx-background-color: white;" text="Menu" />
-      <JFXButton layoutX="890.0" layoutY="550.0" onAction="#modifier_produit" style="-fx-background-color: white;" text="Modifier Bon plan " />
+      <ComboBox fx:id="categoriecombo1" layoutX="482.0" layoutY="39.0" prefWidth="150.0" promptText="Catalogues" />
+      <JFXButton fx:id="ajout_btn" layoutX="332.0" layoutY="687.0" onAction="#ajout" style="-fx-background-color: white;" text="Ajouter Bon Plan" />
+      <JFXButton layoutX="1110.0" layoutY="30.0" onAction="#back_menu" style="-fx-background-color: white;" text="Menu" />
+      <JFXButton fx:id="modif_btn" layoutX="668.0" layoutY="687.0" onAction="#modifier_produit" style="-fx-background-color: white;" text="Modifier Bon plan " />
    </children>
 </AnchorPane>

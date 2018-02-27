@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1200.0" style="-fx-background-color: #86CBFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LivraisonController">
+   <children>
+      <Label layoutX="415.0" layoutY="33.0" text="Vos Livraison">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="203.0" prefHeight="21.0" prefWidth="146.0" text="Nombre ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="142.0" text="Nom produit">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_valider" layoutX="229.0" layoutY="435.0" onAction="#ajout_livraison" style="-fx-background-color: white;" text="Valider livraison" />
+      <TableView fx:id="tabview" layoutX="600.0" layoutY="86.0" prefHeight="351.0" prefWidth="519.0">
+         <columns>
+            <TableColumn fx:id="nom_col" prefWidth="130.0" style="color: #86CBFF;" text="Nom produit" />
+            <TableColumn fx:id="adresse_col" prefWidth="162.0" text="Adresse" />
+            <TableColumn fx:id="nbr_col" prefWidth="115.0" text="Nombres" />
+            <TableColumn fx:id="etat_col" minWidth="0.0" prefWidth="119.0" text="Etat" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="combo_produit" layoutX="281.0" layoutY="127.0" prefHeight="31.0" prefWidth="169.0" />
+      <Spinner fx:id="spinner" layoutX="281.0" layoutY="198.0" prefHeight="31.0" prefWidth="73.0" />
+   </children>
+</AnchorPane>

@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F0675E;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifierController">
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F0675E;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifierController">
    <children>
       <Text layoutX="88.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modification" underline="true">
          <font>
@@ -39,14 +39,14 @@
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="reclamTable" layoutX="285.0" layoutY="62.0" onMouseClicked="#Reclam_Modif" prefHeight="387.0" prefWidth="476.0">
+      <TableView fx:id="reclamTable" layoutX="285.0" layoutY="62.0" onMouseClicked="#Reclam_Modif" prefHeight="387.0" prefWidth="518.0">
          <columns>
             <TableColumn fx:id="ID" prefWidth="37.000030517578125" text="ID" />
             <TableColumn fx:id="Sujet" editable="true" prefWidth="75.0" text="Sujet" />
             <TableColumn fx:id="Reclamation" prefWidth="113.0" text="Reclamation" />
             <TableColumn fx:id="Date" prefWidth="68.0" text="Date" />
-            <TableColumn fx:id="BoutonModif" prefWidth="82.0" text="Modifier" />
-            <TableColumn fx:id="BoutonSupp" prefWidth="99.0" text="Supprimer" />
+            <TableColumn fx:id="etat" prefWidth="106.0" text="Etat" />
+            <TableColumn fx:id="BoutonSupp" prefWidth="116.0" text="Supprimer" />
          </columns>
       </TableView>
       <ImageView layoutX="114.0" layoutY="14.0">

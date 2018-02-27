@@ -3,15 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/AjoutController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/FXMLAjoutController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/MenuController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/ProfileController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/projet_pidev/Projet_Pidev.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/ModifierproduitController.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Services/crudPublication.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Utiles/Basededonne.java</file>
-            <file>file:/C:/Users/samih/OneDrive/Documents/GitHub/Projet_Pidev_java/src/Controller/AfficherproduitController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/GestioncategorieController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Services/CRUD_Abonnement.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/ProfileController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/ModifierController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Services/CRUD_Reclamation.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/LivraisonController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Services/GestionMenu.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Entities/Livraison.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/AdminDashboardController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/FXMLAjoutController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/AfficherproduitController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Entities/Reclamation.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/AjouterMenuController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/Afficher_Detail_ProduitController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/AffichageAbonnementController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Controller/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/samih/OneDrive/Documents/NetBeansProjects/Projet_Pidev_Test/src/Services/Crud_Livraison.java</file>
         </group>
     </open-files>
 </project-private>

@@ -9,7 +9,6 @@ import Entities.ButtonCell;
 import Entities.user;
 import Services.CRUD_USER;
 import com.sun.prism.impl.Disposer.Record;
-import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -26,11 +25,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
@@ -111,10 +110,20 @@ public class Gerer_userController implements Initializable {
     
 
     @FXML
-    private void user_bann(javafx.scene.input.MouseEvent event) throws SQLException {
+    private void user_bann(javafx.scene.input.MouseEvent event) throws SQLException, IOException {
         int id = tabview.getSelectionModel().getSelectedItem().getId();
         CRUD_USER cr = new CRUD_USER();
         cr.update_role(id);
+//        tabview.refresh();
+//      FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Gerer_user.fxml"));
+//        Parent root = (Parent)fxmlLoader.load();
+//      
+//    Gerer_userController ncont = fxmlLoader.<Gerer_userController>getController();
+//        Scene scene = new Scene(root,1200,800);
+//        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+//        stage.setScene(scene);
+//        stage.show();
+        
     }
   
 }

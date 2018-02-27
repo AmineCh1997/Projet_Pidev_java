@@ -57,7 +57,7 @@ public class InscriController implements Initializable {
        cr.authentification(Pseudo.getText(), Mot_passe.getText());
         if (current_user != null )
         {
-        if(current_user.getRole()==0)
+        if((current_user.getRole()==0) || (current_user.getRole()==3))
         {
            
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Menu.fxml"));
@@ -76,8 +76,7 @@ public class InscriController implements Initializable {
         
     AdminDashboardController ncont = fxmlLoader.<AdminDashboardController>getController();    
     Scene scene = new Scene(root,1200,800);
-        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
-        
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;  
         stage.setScene(scene);
         stage.show();  
         }

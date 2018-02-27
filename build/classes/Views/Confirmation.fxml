@@ -6,20 +6,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ConfirmationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white; -fx-border-color: #3D4356; -fx-border-width: 0.3em;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ConfirmationController">
    <children>
-      <Label focusTraversable="false" layoutX="489.0" layoutY="108.0" text="Bienvenue à AyaWin " textFill="#379ce4">
+      <Label focusTraversable="false" layoutX="146.0" layoutY="32.0" text="Bienvenue à AyaWin " textFill="#3d4356">
          <font>
-            <Font size="24.0" />
+            <Font size="36.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="conf_code" layoutX="517.0" layoutY="361.0" />
-      <Label focusTraversable="false" layoutX="451.0" layoutY="241.0" text="Veullez Saisir le code de confirmation ">
+      <JFXTextField fx:id="conf_code" layoutX="228.0" layoutY="219.0" />
+      <Label focusTraversable="false" layoutX="151.0" layoutY="132.0" text="Veullez Saisir le code de confirmation " textFill="#3d4356">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="labelError" focusTraversable="false" layoutX="547.0" layoutY="436.0" text="Code Incorrect ! " textFill="RED" visible="false" />
-      <JFXButton layoutX="568.0" layoutY="479.0" onAction="#check_code" style="-fx-background-color: #86CBFF;" text="Valider" />
+      <Label fx:id="labelError" focusTraversable="false" layoutX="447.0" layoutY="224.0" text="Code Incorrect ! " textFill="RED" visible="false" />
+      <JFXButton layoutX="279.0" layoutY="309.0" onAction="#check_code" style="-fx-background-color: #3D4356;" text="Valider" textFill="WHITE" />
    </children>
 </AnchorPane>

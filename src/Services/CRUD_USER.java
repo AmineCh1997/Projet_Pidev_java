@@ -6,7 +6,6 @@
 package Services;
 
 
-import Controller.InscriController;
 import static Controller.InscriController.current_user;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

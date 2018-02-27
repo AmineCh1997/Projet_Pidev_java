@@ -134,6 +134,8 @@ public class Produit {
     public void setImg(String img) {
         this.img = img;
     }
+   
+           
     
     
     

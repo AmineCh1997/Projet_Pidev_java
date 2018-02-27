@@ -6,11 +6,11 @@
 package Controller;
 
 
-import Entities.Abonnement;
 import Entities.Produit;
+import Entities.Reclamation;
 import Services.*;
-import com.jfoenix.controls.JFXButton;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -19,8 +19,6 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -29,6 +27,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -54,24 +55,43 @@ public class ProfileController implements Initializable {
     private ScrollPane SP;
     @FXML
     private AnchorPane AP;
+    @FXML TableView<Reclamation> mesreclamations;
+    @FXML TableColumn<Reclamation, String> sujet;
+    @FXML TableColumn<Reclamation, String> etat;
+    @FXML TableColumn<Reclamation, String> reclamation;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        
+        
+        etat.setCellValueFactory(new PropertyValueFactory<>("etatString"));
+        sujet.setCellValueFactory(new PropertyValueFactory<>("sujet"));
+        reclamation.setCellValueFactory(new PropertyValueFactory<>("textereclamation"));
+        CRUD_Reclamation rec = new CRUD_Reclamation();
+        try {
+            mesreclamations.setItems(rec.afficherMesReclams(InscriController.current_user.getId()));
+        } catch (SQLException ex) {
+            Logger.getLogger(ProfileController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+        
+        
         String PathImage = InscriController.current_user.getPhoto_profile();
-        System.out.println(InscriController.current_user);
+        System.out.println("file:\\\\\\C:\\wamp64\\www\\Images\\"+PathImage);
        // System.out.println(PathImage);
   NomLabel.setText(InscriController.current_user.getNomuser());
   PrenomLabel.setText(InscriController.current_user.getPrenomuser());
   EmailLabel.setText(InscriController.current_user.getEmailuser());
   NumLabel.setText(InscriController.current_user.getNumerouser());
   if(PathImage!=null)
-  ImageUser.setImage(new Image(PathImage, 350,272, true, true));
-  /*---------------------
-  ----------------------------------
-          ----------------------------------*/
+  ImageUser.setImage(new Image("file:\\\\\\C:\\wamp64\\www\\Images\\"+PathImage, 350,272, true, true));
+       
   GestionProduit gp= new GestionProduit();
   List<Produit> produits=null;
         try {
@@ -147,20 +167,26 @@ public class ProfileController implements Initializable {
         
     }
 
-    @FXML
-    private void upload_action(ActionEvent event) throws SQLException {
+     @FXML
+    private void upload_action(ActionEvent event) throws SQLException, FileNotFoundException, IOException {
         FileChooser fileChooser = new FileChooser();
 fileChooser.setTitle("Open Resource File");
 Stage stage=new Stage();
-
 File file = fileChooser.showOpenDialog(stage);
+   
+        
+
+
+
 if(file!=null){
+    Upload u=new Upload();
+  u.upload(file);
     String Fileurl="file:\\\\\\"+file.getPath();
     Fileurl=Fileurl.replace("\\", "/");
     ImageUser.setImage(new Image(Fileurl, 350,272, true, true));
     CRUD_USER crud = new CRUD_USER();
-    crud.insertPhoto(Fileurl,InscriController.current_user);
-    InscriController.current_user.setPhoto_profile(Fileurl);
+    crud.insertPhoto(file.getName(),InscriController.current_user);
+    InscriController.current_user.setPhoto_profile(file.getName());
  
     }
      

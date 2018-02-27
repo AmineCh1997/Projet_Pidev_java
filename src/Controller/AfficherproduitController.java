@@ -11,7 +11,6 @@ import Services.CRUD_Abonnement;
 import Services.GestionCategorie;
 import Services.GestionProduit;
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXComboBox;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -19,7 +18,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -67,50 +65,66 @@ public class AfficherproduitController implements Initializable {
     private TextArea villeproduit ;
     @FXML
     private ImageView imageproduit ;
-    
+    @FXML JFXButton ajout_btn;
+    @FXML JFXButton modif_btn;
     Produit selectedP  ;
+    public static Produit current_produit ;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        selectedP = new Produit();
-        ca= new CRUD_Abonnement();
-        listabn= ca.afficheridprodAbonnement(InscriController.current_user.getId());
-
-        
-        GestionProduit Gp = new GestionProduit();
-         GestionCategorie Gc = new GestionCategorie();
-         //CRUD_Abonnement cr = new CRUD_Abonnement();
-        
         try {
+            selectedP = new Produit();
+            ca= new CRUD_Abonnement();
+            listabn= ca.afficheridprodAbonnement(InscriController.current_user.getId());
+            GestionProduit Gp = new GestionProduit();
+            GestionCategorie Gc = new GestionCategorie();
             categoriecombo1.getItems().addAll(Gc.afficher_categorieList());
+            
+            
+            
+            
+            //CRUD_Abonnement cr = new CRUD_Abonnement();
+            
+            
+            
+            
+            categoriecombo1.getSelectionModel().selectedItemProperty()
+                    .addListener(new ChangeListener<String>() {
+                        //private String newValue;
+                        public void changed(ObservableValue<? extends String> observable,
+                                String oldValue, String newValue) {
+                            selectedC=newValue ;
+                            beforeselectedC = oldValue ;
+                            
+                            System.out.println("Value is: "+newValue);
+                            AP.getChildren().clear();
+                            try{
+                                
+                                afficherproduits(prodsbycat());
+                            } catch (SQLException ex) {
+                                Logger.getLogger(AfficherproduitController.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                            
+                        }
+                        
+                    });
+            if(InscriController.current_user.getRole()==0)
+            {
+                ajout_btn.setVisible(false);
+                modif_btn.setVisible(false);
+            }
+            else {
+                ajout_btn.setVisible(true);
+                modif_btn.setVisible(true);
+                
+                
+            }
+            // TODO
         } catch (SQLException ex) {
             Logger.getLogger(AfficherproduitController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        categoriecombo1.getSelectionModel().selectedItemProperty()
-    .addListener(new ChangeListener<String>() {
-            //private String newValue;
-        public void changed(ObservableValue<? extends String> observable,
-                            String oldValue, String newValue) {
-            selectedC=newValue ;
-            beforeselectedC = oldValue ;
-            
-            System.out.println("Value is: "+newValue);
-           AP.getChildren().clear();
-           try{
-               
-                afficherproduits(prodsbycat());
-            } catch (SQLException ex) {
-                Logger.getLogger(AfficherproduitController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-    
-        }
-        
-        });
-        // TODO
     }   
     public List<Produit> prodsbycat() throws SQLException
     {
@@ -119,15 +133,9 @@ public class AfficherproduitController implements Initializable {
          int a =Gc.getidbyname(selectedC);
         return Gp.afficher_produitBycategorie1(a);
     }
-    public void BasculeAb(ImageView N1,ImageView N2){
-        if(N1.isVisible()) {
-            N1.setVisible(false);
-            N2.setVisible(true);
-        }else {
-            N1.setVisible(true);
-            N2.setVisible(false);
-        }
-    }
+    
+    
+    
     public void afficherproduits(List<Produit> produits)
     {
         int taille = produits.size();
@@ -142,13 +150,13 @@ public class AfficherproduitController implements Initializable {
             currentPane.getChildren().clear();
             Label nomproduit =new Label();
             Label Descriptionproduit = new Label();
-            JFXButton button = new JFXButton();
+            JFXButton button = new JFXButton("Plus de Details");
             
-            ImageView abonne = new ImageView(new Image("/Utiles/coeur2.png",50,50,true,true));
-            ImageView desabonne = new ImageView(new Image("/Utiles/coeur.png",50,50,true,true));
-            AnchorPane abonnePane = new AnchorPane();
-//            AnchorPane desabonnePane = new AnchorPane();
-            JFXButton boutonabonner = new JFXButton();
+//            ImageView abonne = new ImageView(new Image("/Utiles/coeur2.png",50,50,true,true));
+//            ImageView desabonne = new ImageView(new Image("/Utiles/coeur.png",50,50,true,true));
+//            AnchorPane abonnePane = new AnchorPane();
+////            AnchorPane desabonnePane = new AnchorPane();
+//            JFXButton boutonabonner = new JFXButton();
 
             
             
@@ -157,17 +165,31 @@ public class AfficherproduitController implements Initializable {
             EventHandler Clicked = new EventHandler() {
                     @Override
                     public void handle(Event event) {
-                        System.out.println("click");
-                        selectedP=produits.stream()
+                        try {
+                            //                        System.out.println("click");
+//                        selectedP=produits.stream()
+//                                .filter(p->p.getId()==Integer.parseInt(currentPane.getId()))
+//                                .findFirst().get();
+//afficherproduitselec(selectedP);
+                                   current_produit=produits.stream()
                                 .filter(p->p.getId()==Integer.parseInt(currentPane.getId()))
                                 .findFirst().get();
-                        afficherproduitselec(selectedP);
+FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Afficher_Detail_Produit.fxml"));
+Parent root = (Parent)fxmlLoader.load();
+Afficher_Detail_ProduitController ncont = fxmlLoader.<Afficher_Detail_ProduitController>getController();
+Scene scene = new Scene(root,1200,800);
+Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+
+stage.setScene(scene);
+stage.show();   } catch (IOException ex) {  
+                            Logger.getLogger(AfficherproduitController.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                     }
                 };
             
             
             
-            EventHandler abonner;
+           /* EventHandler abonner;
               
             //boutton ta7t taswiraz
             abonner = new EventHandler() {
@@ -234,42 +256,43 @@ public class AfficherproduitController implements Initializable {
             //desabonne.onMouseClickedProperty().setValue(desabonner);
             
            
-            //CHAKALA
+            //CHAKALA*/
             
-             button.setLayoutX(0);
-             button.setLayoutY(0);
-             button.setPrefSize(175, 175);
-             button.setStyle("-fx-border-color:#F43955");
+             button.setLayoutX(320);
+             button.setLayoutY(200);
+             button.setPrefSize(150, 20);
+             button.setStyle("-fx-border-color:#000000");
              button.setOnAction(Clicked);
              
             //label
-            nomproduit.setLayoutX(49);
-            nomproduit.setLayoutY(130);
+            nomproduit.setLayoutX(20);
+            nomproduit.setLayoutY(20);
             nomproduit.setPrefSize(90, 18);
             nomproduit.setText("Nom :"+((Produit)produits.get(i)).getNom());
             Descriptionproduit.setLayoutX(49);
             Descriptionproduit.setLayoutY(149);
-            Descriptionproduit.setPrefSize(90, 18);  
+            Descriptionproduit.setPrefSize(150, 18);  
             Descriptionproduit.setText("Description : "+((Produit)produits.get(i)).getDescription());
             //pane
             
-            currentPane.setLayoutX((i%2)*195+20); 
-            currentPane.setLayoutY((i/2)*195+50);
-            currentPane.setPrefSize(175, 175);
-            currentPane.setStyle("-fx-background-color:white");   
+            currentPane.setLayoutX((i%2)*500); 
+            currentPane.setLayoutY((i/2)*250);
+            currentPane.setPrefSize(500,250);
+            currentPane.setStyle("-fx-border-color:#000000");   
             currentPane.setVisible(true);
             currentPane.setId(String.valueOf(((Produit)produits.get(i)).getId()));
     
     //add components to pane
-            abonnePane.getChildren().add(abonne);
-            abonnePane.getChildren().add(desabonne);
-            abonnePane.getChildren().add(boutonabonner);
+//            abonnePane.getChildren().add(abonne);
+//            abonnePane.getChildren().add(desabonne);
+//            abonnePane.getChildren().add(boutonabonner);
 
 
-            currentPane.getChildren().add(button);
+            
             currentPane.getChildren().add(nomproduit);
             currentPane.getChildren().add(Descriptionproduit);
-            currentPane.getChildren().add(abonnePane);
+            currentPane.getChildren().add(button);
+           // currentPane.getChildren().add(abonnePane);
     
      //add pane to Anchorpane       
              AP.getChildren().add(currentPane);

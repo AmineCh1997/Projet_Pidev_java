@@ -7,6 +7,7 @@ package Services;
 
 import Utiles.Basededonne;
 import Entities.Produit;
+import Entities.user;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -85,6 +86,8 @@ public class GestionProduit {
             p.setNom(rs.getString("nom"));
            p.setImg(rs.getString("photo"));
            p.setVille(rs.getString("ville"));
+           p.setAdresse(rs.getString("adresse"));
+           p.setId_user(rs.getInt("id_user"));
             listeprod.add(p);
           
         }
@@ -103,7 +106,6 @@ public class GestionProduit {
             
         {
            Produit p = new Produit();
-           
            p.setId_cat(rs.getInt("id_categorie"));
            p.setDescription(rs.getString("description"));
            p.setId(rs.getInt("id"));
@@ -138,6 +140,7 @@ public class GestionProduit {
             
         {
              Produit p = new Produit();
+             p.setId_user(rs.getInt("id_user"));
              p.setDescription(rs.getString("description"));
             p.setId(rs.getInt("id"));
             p.setNom(rs.getString("nom"));
@@ -149,6 +152,8 @@ public class GestionProduit {
         return listeprod ;
         
     }
+ 
+     
     
     
     

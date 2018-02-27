@@ -24,5 +24,6 @@
       <Button layoutX="421.0" layoutY="485.0" mnemonicParsing="false" onAction="#upload_img" text="Photo" />
       <JFXButton layoutX="1034.0" layoutY="43.0" onAction="#back" text="Back" />
       <JFXComboBox fx:id="combo_ville" layoutX="111.0" layoutY="179.0" />
+      <JFXButton layoutX="838.0" layoutY="591.0" onAction="#go_to_menu" prefHeight="62.0" prefWidth="237.0" text="Ajouter Menu à votre Restaurant" />
    </children>
 </AnchorPane>

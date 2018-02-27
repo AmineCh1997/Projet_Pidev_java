@@ -31,7 +31,7 @@ public class Mail {
         session= Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("mohamedsamih.layeb@esprit.tn", "b982d5176f");
+                return new PasswordAuthentication("ayawinapp@gmail.com", "azerty12345");
             }
         });
       }
@@ -50,6 +50,27 @@ public class Mail {
             //send message  
             Transport.send(message);
             System.out.println("message sent successfully");
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
+         }
+         
+         
+         public void Send_Reclamation (String sujet ,String email,String reclamation){
+             
+         
+                 
+        //compose message    
+        try {
+            
+            MimeMessage message = new MimeMessage(session);
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
+            message.setSubject("Reclamation !!!");
+            message.setText("Sujet de reclamation : "+sujet +"\n"+"Email"+email+"\n"+reclamation );
+            
+            //send message  
+            Transport.send(message);
+            System.out.println("Reclamation envoyée !");
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }

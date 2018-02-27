@@ -17,7 +17,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <JFXButton focusTraversable="false" layoutX="1054.0" layoutY="25.0" onAction="#go_Back_inscri" style="-fx-background-color: white;" text="Deconnexion" />
+            <JFXButton focusTraversable="false" layoutX="1065.0" layoutY="25.0" onAction="#go_Back_inscri" style="-fx-background-color: white; -fx-background-radius: 5em;" text="Deconnexion" />
             <ImageView layoutX="980.0" layoutY="17.0">
                <image>
                   <Image url="@../Utiles/icons8_Male_User_48px_1.png" />
@@ -30,20 +30,14 @@
                </image>
             </ImageView>
             <JFXButton focusTraversable="false" layoutX="900.0" layoutY="17.0" onAction="#go_to_catalogue" prefHeight="48.0" prefWidth="47.0" text="." />
-            <ImageView layoutX="815.0" layoutY="17.0">
-               <image>
-                  <Image url="@../Utiles/icons8_Warning_Shield_48px_1.png" />
-               </image>
-            </ImageView>
-            <JFXButton focusTraversable="false" layoutX="816.0" layoutY="17.0" onAction="#go_to_Reclamation" prefHeight="48.0" prefWidth="47.0" text="." />
          </children>
       </AnchorPane>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="240.0" layoutY="81.0" prefHeight="720.0" prefWidth="720.0" AnchorPane.topAnchor="81.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="480.0" layoutY="81.0" prefHeight="720.0" prefWidth="720.0" AnchorPane.topAnchor="81.0">
          <content>
             <AnchorPane fx:id="anchorpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" />
          </content>
       </ScrollPane>
-      <JFXButton layoutX="29.0" layoutY="341.0" onAction="#go_to_ajout_pub" text="Ajouter publication" />
+      <JFXButton layoutX="137.0" layoutY="115.0" onAction="#go_to_ajout_pub" style="-fx-background-color: #3D4356; -fx-background-radius: 5em;" text="Ajouter publication" textFill="WHITE" />
       
    </children>
 </AnchorPane>

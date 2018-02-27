@@ -25,6 +25,7 @@ public class user {
     private String password ; 
     private String numerouser;
     private String photo_profile;
+    private ButtonCell btn_ban ;
 
    public user(int id, String nomuser, String prenomuser, String emailuser, String numerouser) {
         this.id = id;

@@ -81,23 +81,7 @@ public class AdminDashboardController implements Initializable {
         
     }
     
-    @FXML
-    private void go_To_Reclamation(ActionEvent event) throws  IOException {
-        
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Modifier.fxml"));
-        Parent root = (Parent)fxmlLoader.load();
-        
-        
-    ModifierController ncont = fxmlLoader.<ModifierController>getController();
-    
-        Scene scene = new Scene(root,1200,800);
-        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
-        
-        stage.setScene(scene);
-        stage.show();
-        
-        
-    }
+   
      @FXML
     private void go_To_Evenements(ActionEvent event) throws  IOException {
         
@@ -115,8 +99,25 @@ public class AdminDashboardController implements Initializable {
         
         
     }
-     
+      @FXML
+    private void go_To_Reclamation(ActionEvent event) throws  IOException {
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Modifier.fxml"));
+        Parent root = (Parent)fxmlLoader.load();
+        
+        
+         ModifierController ncont = fxmlLoader.<ModifierController>getController();
+    
+        Scene scene = new Scene(root,1200,800);
+        Stage stage = (Stage) ( (Node) event.getSource()).getScene().getWindow() ;
+        
+        stage.setScene(scene);
+        stage.show();
+        
+        
+    
     }
+}
    
     
 
